@@ -7,5 +7,6 @@ USE hotel;
 CREATE TABLE kamers (
     kamersID int NOT NULL PRIMARY KEY,
     kamerNaam VARCHAR(255) NOT NULL,
-    
-)
+    kamerBeschrijving VARCHAR(255),
+    beschikbaarheid BOOLEAN NOT NULL
+);
