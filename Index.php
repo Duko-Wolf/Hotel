@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel</title>
+    <title>Index</title>
 
 
 </head>
@@ -18,11 +18,12 @@
 
     <!-- change to @include -->
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Kamers</a>
-        <a href="#">Restaurant</a>
-        <a href="#">Over ons</a>
-        <a href="#">Contact</a>
+        <a href="home.php">Home</a>
+        <a href="kamers.php">Kamers</a>
+        <a href="restaurant.php">Restaurant</a>
+        <a href="OverOns.php">Over ons</a>
+        <a href="Contact.php">Contact</a>
+        <a href="weer.php">Het Weer</a>
     </nav>
     
     <main>

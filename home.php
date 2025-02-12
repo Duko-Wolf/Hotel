@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamers</title>
+    <title>home</title>
 </head>
 <body>
 <header>
         <h1>Bonjour</h1>
-        <h2>Welkom in kamers</h2>
+        <h2>Welkom in home</h2>
     </header>
     
 </body>
