@@ -4,14 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weerstation Den Hoorn, Texel</title>
-    <nav>
-    <a href="home.php">Home</a>
-    <a href="kamers.php">Kamers</a>
-    <a href="restaurant.php">Restaurant</a>
-    <a href="ons.php">Over ons</a>
-    <a href="Contact.php">Contact</a>
-    <a href="weer.php">Het Weer</a>
-</nav>
+    <?php include('includes/navbar.php'); ?>
     <style>
         body {
             font-family: Arial, sans-serif;

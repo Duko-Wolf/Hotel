@@ -9,20 +9,10 @@
 
 <body>
     <!--  change to @include -->
-    <header>
-        <h1>Bonjour</h1>
-        <h2>Welkom in het hotel</h2>
-    </header>
+    <?php include('includes/header.php'); ?>
 
     <!-- change to @include -->
-    <nav>
-        <a href="home.php">Home</a>
-        <a href="kamers.php">Kamers</a>
-        <a href="restaurant.php">Restaurant</a>
-        <a href="ons.php">Over ons</a>
-        <a href="Contact.php">Contact</a>
-        <a href="weer.php">Het Weer</a>
-    </nav>
+<?php include('includes/navbar.php'); ?>
     
     <main>
         <section>
@@ -49,6 +39,8 @@
             </article>
         </section>
     </main>
+
+    <?php include('includes/footer.php'); ?>
 </body>
 
 </html>

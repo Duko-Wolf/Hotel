@@ -11,14 +11,7 @@
         <h2>Welkom in contact</h2>
     </header>
     <!-- change to @include -->
-    <nav>
-        <a href="home.php">Home</a>
-        <a href="kamers.php">Kamers</a>
-        <a href="restaurant.php">Restaurant</a>
-        <a href="ons.php">Over ons</a>
-        <a href="Contact.php">Contact</a>
-        <a href="weer.php">Het Weer</a>
-    </nav>
+    <?php include('includes/navbar.php'); ?>
     
     <main>
         <section>
