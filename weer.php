@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weerstation Den Hoorn, Texel</title>
+    <nav>
+    <a href="home.php">Home</a>
+    <a href="kamers.php">Kamers</a>
+    <a href="restaurant.php">Restaurant</a>
+    <a href="ons.php">Over ons</a>
+    <a href="Contact.php">Contact</a>
+    <a href="weer.php">Het Weer</a>
+</nav>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -39,6 +47,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="weather-container">
         <h1>Weer in Den Hoorn, Texel</h1>
@@ -50,8 +59,8 @@
     </div>
 
     <script>
-        const apiKey = "33b5b57a69b7839e80af65a616547cb1";  // Vervang met je eigen API-sleutel
-        const city = "Den Hoorn,NL";  // Locatie: Den Hoorn, Texel
+        const apiKey = "33b5b57a69b7839e80af65a616547cb1";  
+        const city = "Den Hoorn,NL";  
         const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=nl&appid=${apiKey}`;
 
         function getWeatherData() {

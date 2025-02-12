@@ -19,7 +19,7 @@
         <a href="home.php">Home</a>
         <a href="kamers.php">Kamers</a>
         <a href="restaurant.php">Restaurant</a>
-        <a href="OverOns.php">Over ons</a>
+        <a href="ons.php">Over ons</a>
         <a href="Contact.php">Contact</a>
         <a href="weer.php">Het Weer</a>
     </nav>
