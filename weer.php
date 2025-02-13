@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weerstation Den Hoorn, Texel</title>
+    <title>Weerstation alkmaar, 1234AB</title>
     <nav>
-    <a href="home.php">Home</a>
+    <a href="index.php">Home</a>
     <a href="kamers.php">Kamers</a>
     <a href="restaurant.php">Restaurant</a>
     <a href="ons.php">Over ons</a>
@@ -50,7 +50,7 @@
 
 <body>
     <div class="weather-container">
-        <h1>Weer in Den Hoorn, Texel</h1>
+        <h1>straatnaam 85, alkmaar</h1>
         <img class="icon" src="" alt="Weericoon">
         <p class="weather-info">Temperatuur: <span class="temperature"></span>°C</p>
         <p class="weather-info">Weersomstandigheden: <span class="condition"></span></p>
@@ -60,20 +60,19 @@
 
     <script>
         const apiKey = "33b5b57a69b7839e80af65a616547cb1";  
-        const city = "Den Hoorn,NL";  
+        const city = "alkmaar,NL";  
         const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=nl&appid=${apiKey}`;
 
         function getWeatherData() {
             fetch(apiUrl)
                 .then(response => response.json())
                 .then(data => {
-                    // Toon het weer
+
                     document.querySelector('.temperature').textContent = data.main.temp;
                     document.querySelector('.condition').textContent = data.weather[0].description;
                     document.querySelector('.humidity').textContent = data.main.humidity;
                     document.querySelector('.wind').textContent = data.wind.speed;
                     
-                    // Toon het weericoon
                     const iconUrl = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
                     document.querySelector('.icon').src = iconUrl;
                 })
@@ -83,9 +82,8 @@
                 });
         }
 
-        // Haal de gegevens direct op en stel het in om elke 5 minuten (300 seconden) opnieuw te verversen
         getWeatherData();
-        setInterval(getWeatherData, 300000);  // 300000 ms = 5 minuten
+        setInterval(getWeatherData, 300000); 
     </script>
 </body>
 </html>
