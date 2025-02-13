@@ -17,7 +17,7 @@
     <main>
         <section>
             <article>
-
+                <p>dit is een voorbeeld</p>
             </article>
         </section>
 
