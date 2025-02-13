@@ -3,31 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling/index.css"/>
     <title>Hotel</title>
 </head>
 
 <body>
-<header>
-    <h1>Bonjour</h1>
-    <h2>Welkom in index</h2>
-</header>
-<!-- change to @include -->
-<nav>
-    <a href="index.php">Home</a>
-    <a href="kamers.php">Kamers</a>
-    <a href="restaurant.php">Restaurant</a>
-    <a href="ons.php">Over ons</a>
-    <a href="Contact.php">Contact</a>
-    <a href="weer.php">Het Weer</a>
-</nav>
+    <!--  change to @include -->
+    <?php include('includes/header.php'); ?>
 
-<main>
-    <section>
-        <article>
-            <h2>Onze Geschiedenis</h2>
-            <p>Ons bedrijf werd opgericht in 1990 met de visie om een unieke ervaring te bieden aan onze gasten. Door de jaren heen zijn we uitgegroeid tot een geliefde bestemming voor reizigers van over de hele wereld.</p>
-        </article>
-    </section>
+    <!-- change to @include -->
+<?php include('includes/navbar.php'); ?>
+    
+    <main>
+        <section>
+            <article>
+
+            </article>
+        </section>
 
     <section>
         <article>
@@ -43,12 +35,13 @@
         </article>
     </section>
 
-    <section>
-        <article>
-            <h2>Contact</h2>
-            <p>Heeft u vragen of opmerkingen? Neem gerust contact met ons op via ons contactformulier of bel ons op (123) 456-7890.</p>
-        </article>
-    </section>
-</main>
+        <section>
+            <article>
+                
+            </article>
+        </section>
+    </main>
+
+    <?php include('includes/footer.php'); ?>
 </body>
 </html>

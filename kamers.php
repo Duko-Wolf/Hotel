@@ -3,30 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling/index.css"/>
     <title>Kamers</title>
 </head>
 <body>
 <header>
-    <h1>Bonjour</h1>
-    <h2>Welkom in Kamers</h2>
-</header>
-<!-- change to @include -->
-<nav>
-    <a href="index.php">Home</a>
-    <a href="kamers.php">Kamers</a>
-    <a href="restaurant.php">Restaurant</a>
-    <a href="ons.php">Over ons</a>
-    <a href="Contact.php">Contact</a>
-    <a href="weer.php">Het Weer</a>
-</nav>
-
-<main>
-    <section>
-        <article>
+        <h1>Bonjour</h1>
+        <h2>Welkom in kamers</h2>
+    </header>
+    <!-- change to @include -->
+    <?php include('includes/navbar.php'); ?>
+    
+    <main>
+        <section>
+            <article>
             <h2>Onze Geschiedenis</h2>
             <p>Ons bedrijf werd opgericht in 1990 met de visie om een unieke ervaring te bieden aan onze gasten. Door de jaren heen zijn we uitgegroeid tot een geliefde bestemming voor reizigers van over de hele wereld.</p>
-        </article>
-    </section>
+            </article>
+        </section>
 
     <section>
         <article>

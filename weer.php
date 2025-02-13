@@ -3,15 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weerstation alkmaar, 1234AB</title>
-    <nav>
-    <a href="index.php">Home</a>
-    <a href="kamers.php">Kamers</a>
-    <a href="restaurant.php">Restaurant</a>
-    <a href="ons.php">Over ons</a>
-    <a href="Contact.php">Contact</a>
-    <a href="weer.php">Het Weer</a>
-</nav>
+    <link rel="stylesheet" href="styling/index.css"/>
+    <title>Weerstation Den Hoorn, Texel</title>
+    <?php include('includes/navbar.php'); ?>
     <style>
         body {
             font-family: Arial, sans-serif;
