@@ -1,8 +1,9 @@
 <header>
 <div class="hero">
       <div class="hero-text">
-        <h1>hotel</h1>
-        <p>front</p>
+        <h1>Hotel De Zonne Vallei</h1>
+        <h2>Uw thuis weg van huis</h2>
       </div>
-    </div>
-    </header>
+</div>
+</header>
+ 

@@ -1,5 +1,7 @@
 <footer>
 
+<!-- 
+zet hem eventjes in comment aangezien het mij hindert
 <ul>
     <li>
         <p>

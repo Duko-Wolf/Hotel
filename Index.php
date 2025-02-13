@@ -8,10 +8,7 @@
 </head>
 
 <body>
-    <!--  change to @include -->
-    <?php include('includes/header.php'); ?>
-
-    <!-- change to @include -->
+<?php include('includes/header.php'); ?>
 <?php include('includes/navbar.php'); ?>
     
     <main>
@@ -23,8 +20,8 @@
 
     <section>
         <article>
-            <h2>Onze Missie</h2>
-            <p>Onze missie is om onze gasten een onvergetelijke ervaring te bieden door uitstekende service, comfortabele accommodaties en heerlijke gerechten.</p>
+            <h2>Welkom</h2>
+            <p>Ontsnap aan de dagelijkse drukte en ontdek de rust en luxe van Hotel De Zonne Vallei, een 3-duimen hotel gelegen in het hart van Alkmaar. Ons hotel biedt een perfecte mix van comfort, gastvrijheid en adembenemende natuur. Of u nu voor een romantisch uitje, een familievakantie of een zakelijke bijeenkomst komt, ons hotel heeft precies wat u nodig heeft voor een onvergetelijk verblijf.</p>
         </article>
     </section>
 

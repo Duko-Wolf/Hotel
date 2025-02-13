@@ -11,7 +11,6 @@
         <h1>Bonjour</h1>
         <h2>Welkom in kamers</h2>
     </header>
-    <!-- change to @include -->
     <?php include('includes/navbar.php'); ?>
     
     <main>
