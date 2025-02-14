@@ -1,5 +1,6 @@
     
     <nav>
+    <link rel="stylesheet" href="reset/nav.css"/>
     <link rel="stylesheet" href="styling/nav.css"/>
         <ul>
         <li>
@@ -33,3 +34,18 @@
         
         </ul>
     </nav>
+    <?php
+                if (isset($_SESSION['email'])) {
+                    //uitlog
+                    echo '
+                    <form method="post">
+                        <button class=" text-light nav-link btn btn-danger" type="submit" name="Uitlog">Uitlog</button>
+                    </form>
+                    ';
+                    // al heb je op uitlog gedrukt dan vernietigt hij de sessie email
+                    if (isset($_POST["Uitlog"])) {
+                        session_destroy();
+                        header("Refresh:0");
+                    }
+                }
+                ?>

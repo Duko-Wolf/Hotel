@@ -6,40 +6,7 @@
     <link rel="stylesheet" href="styling/index.css"/>
     <title>Weerstation Den Hoorn, Texel</title>
     <?php include('includes/navbar.php'); ?>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-        }
-        .weather-container {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            padding: 20px;
-            max-width: 300px;
-            width: 100%;
-        }
-        h1 {
-            font-size: 24px;
-        }
-        .weather-info {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-        .temperature {
-            font-size: 32px;
-            font-weight: bold;
-        }
-        .icon {
-            width: 100px;
-            height: 100px;
-        }
-    </style>
+    
 </head>
 
 <body>

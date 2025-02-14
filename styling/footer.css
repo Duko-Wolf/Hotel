@@ -1,9 +1,5 @@
 footer {
-    display: block;
-    margin-bottom: 0%;
-    margin-left: 100px;
-    padding-left: 100px;
-    width:100%;
-    padding-top: 10px;
-    max-height: 300px;
+    align-items: center;
+height: auto;
+border: 3px solid black;
 }

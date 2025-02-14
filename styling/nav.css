@@ -2,7 +2,7 @@ nav {
     background-color: #F9F58B;
     padding: 1px;
     text-align: center;
-    padding-left: 10%;
+    justify-self: center;
     margin: 0 auto;
   }
  
