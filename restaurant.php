@@ -7,13 +7,9 @@
     <title>restaurant</title>
 </head>
 <body>
-<header>
-    <h1>Hotel De Zonne Vallei</h1> <br>
-    <h2>Het Restaurant</h2> <br>
-     
-</header>
-<?php include('includes/navbar.php'); ?>
-
+    <?php include('includes/header.php'); ?>
+    <?php include('includes/navbar.php'); ?>
+    
 <main>
     <section>
         <article>
@@ -81,6 +77,7 @@
 </p>
      </article>
     </section>
+    <?php include('includes/footer.php'); ?>
 </main>
 </body>
 </html>

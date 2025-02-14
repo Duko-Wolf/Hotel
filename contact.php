@@ -7,11 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1>Bonjour</h1>
-        <h2>Welkom in Contact</h2>
-    </header>
+    <?php include('includes/header.php'); ?>
     <?php include('includes/navbar.php'); ?>
+
     
     <main>
         <section>
@@ -34,6 +32,7 @@
         <article>
         </article>
     </section>
+    <?php include('includes/footer.php'); ?>
 </main>
 </body>
 </html>

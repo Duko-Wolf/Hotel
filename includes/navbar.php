@@ -20,9 +20,9 @@
             <a href="Contact.php">Contact</a>
         </li>
 
-        <li>
+        <!--<li>
             <a href="weer.php">Het Weer</a>
-        </li>
+        </li> -->
         
         </ul>
     </nav>
