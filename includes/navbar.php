@@ -1,7 +1,11 @@
+    
     <nav>
+    <link rel="stylesheet" href="styling/nav.css"/>
         <ul>
         <li>
-            <a href="index.php">Home</a>
+        <a class="logoContainer" href="index.php">
+            <img class="logo" src="images/img-logo/logo.png"alt="" >
+            </a>
         </li>
 
         <li>
@@ -17,11 +21,11 @@
         </li>
 
         <li>
-            <a href="Contact.php">Contact</a>
+            <a href="contact.php">Contact</a>
         </li>
 
         <li>
-            <a href="weer.php">Het Weer</a>
+            <a href="kameraanpassen.php">Het Weer</a>
         </li>
         
         </ul>
