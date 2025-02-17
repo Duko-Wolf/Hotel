@@ -10,8 +10,8 @@ footer {
     right: 20px; /* Pas dit aan naar wens */
     top: 50%; /* Plaats de knop verticaal in het midden */
     transform: translateY(-50%); /* Centreer de knop verticaal */
-    background-color: #fff;
-    color: #fff;
+    background-color: #5e5b5b;
+    color: #961818;
     border: none; /* Verwijder de zwarte border */
     cursor: pointer;
 }
