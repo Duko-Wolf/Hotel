@@ -50,7 +50,7 @@
         const form = document.querySelector('.contactForm');
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.');
+            // alert('Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.');
         });
     </script>
 </body>

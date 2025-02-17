@@ -23,22 +23,26 @@
             <a href="contact.php">Contact</a>
         </li>
 
-        <li>
-            <a href="Kameraanpassen.php">Kamer Aanpassen</a>
-        </li>
+
 
         <?php if (isset($_SESSION['name'])): ?>
+            <li>
+                <a href="Kameraanpassen.php">Kamer Aanpassen</a>
+            </li>
+
             <li>
                 <form method="post">
                     <button class="text-light nav-link btn btn-danger" name="Uitlog">Uitlog</button>
                 </form>
             </li>
+
+
             <?php
-                // al heb je op uitlog gedrukt dan vernietigt hij de sessie email
-                if (isset($_POST["Uitlog"])) {
-                    session_destroy();
-                    header("Refresh:0");
-                }
+            // al heb je op uitlog gedrukt dan vernietigt hij de sessie email
+            if (isset($_POST["Uitlog"])) {
+                session_destroy();
+                header("Refresh:0");
+            }
             ?>
         <?php endif; ?>
     </ul>
