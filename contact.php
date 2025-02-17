@@ -40,7 +40,7 @@
                 <h2>Contactgegevens</h2>
                 <p>Telefoonnummer: +31 123 456 789</p>
                 <p>Adres: Straatnaam 85, 1234 AB Alkmaar</p>
-                <p>Email: info@hotelzonnevallei.nl</p>
+                <p>Email: info@hotelzonnevallei.nl</p> <br>
             </article>
         </section>
     </main>

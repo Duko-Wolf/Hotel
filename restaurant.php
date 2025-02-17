@@ -86,7 +86,7 @@
                     3. Spaghetti Bolognese - Met huisgemaakte tomatensaus.<br>
                     4. Pannenkoeken - Met stroop en poedersuiker.<br>
                     5. Fish and Chips - Gebakken vis met frietjes en een beetje ketchup.
-                </p>
+                </p> <br>
             </article>
         </section>
         

@@ -7,7 +7,7 @@
             </li>
             <li>
                 <p>Info over eventuele andere locaties</p>
-            </li>
+            </li> <br>
             <!-- <li>
                 <a href="imglogo"><img src="example.gif" alt="examplehtml"></a>
             </li>
