@@ -60,7 +60,7 @@ function login($conn)
     }
 }
 
-function registreer($conn)
+function kamerToevoegen($conn)
 {
     // kijkt of de knop is ingeklit en daarna vult nieuwe variabelen met waardes van de input velden
     if (isset($_POST['submit'])) {
