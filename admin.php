@@ -21,17 +21,13 @@
 
     $conn = dbConnect();
 
-    if (isset($_SESSION['email'])) {
+    if (isset($_SESSION['name'])) {
         header("Location: index.php");
         exit();
     }
     ?>
 
     <?php include("includes/header.php");
-    ?>
-    <?php
-
-
     ?>
     <?php include("includes/navbar.php");
     ?>
