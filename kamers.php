@@ -7,8 +7,9 @@
     <title>Kamers</title>
 </head>
 <body>
-    <?php include('includes/header.php'); ?>
+    
     <?php include('includes/navbar.php'); ?>
+    <?php include('includes/header.php'); ?>
 
     
     <main>

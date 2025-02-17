@@ -1,9 +1,9 @@
 nav {
     background-color: #F9F58B;
-    padding: 1px;
     text-align: center;
     justify-self: center;
     margin: 0 auto;
+    width: 100%;
   }
  
   nav > ul {

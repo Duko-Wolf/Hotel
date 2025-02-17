@@ -1,11 +1,10 @@
-    
-    <nav>
-    <link rel="stylesheet" href="reset/nav.css"/>
-    <link rel="stylesheet" href="styling/nav.css"/>
-        <ul>
+<nav>
+    <link rel="stylesheet" href="reset/nav.css" />
+    <link rel="stylesheet" href="styling/nav.css" />
+    <ul>
         <li>
-        <a class="logoContainer" href="index.php">
-            <img class="logo" src="images/img-logo/logo.png"alt="" >
+            <a class="logoContainer" href="index.php">
+                <img class="logo" src="images/img-logo/logo.png" alt="">
             </a>
         </li>
 
@@ -28,24 +27,19 @@
         <!--<li>
             <a href="weer.php">Het Weer</a>
         </li> -->
-        <li>
-            <a href="kameraanpassen.php">Het Weer</a>
-        </li>
+
+        <?php
+        if (isset($_SESSION['name'])) {
+            //uitlog
+            echo '<li>
+            
         
-        </ul>
-    </nav>
-    <?php
-                if (isset($_SESSION['email'])) {
-                    //uitlog
-                    echo '
-                    <form method="post">
-                        <button class=" text-light nav-link btn btn-danger" type="submit" name="Uitlog">Uitlog</button>
-                    </form>
                     ';
-                    // al heb je op uitlog gedrukt dan vernietigt hij de sessie email
-                    if (isset($_POST["Uitlog"])) {
-                        session_destroy();
-                        header("Refresh:0");
-                    }
-                }
-                ?>
+
+                    echo'<a href="kameraanpassen.php">Het Weer</a>';
+                    echo '</li>';
+        }
+        ?>
+
+    </ul>
+</nav>
