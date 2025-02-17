@@ -30,17 +30,17 @@ function login($conn)
                 $stmt = $conn->prepare("SELECT * FROM admin WHERE name = :name");
                 $stmt->bindParam(':name', $name);
                 $stmt->execute();
-                $gebruiker = $stmt->fetch(PDO::FETCH_ASSOC);
+                $name = $stmt->fetch(PDO::FETCH_ASSOC);
 
                 // als die de gebruiker kan ophalen uit de database en als de statement niet false is dan voert die de volgende code uit
-                if ($gebruiker !== false) {
+                if ($name !== false) {
 
                     // kijkt of het wachtwoord gelijk is als het wachtwoord in de database
-                    if (password_verify($wachtwoord, $gebruiker['password'])) {
+                    if (password_verify($wachtwoord, $name['password'])) {
                         echo "Wachtwoord klopt";
 
                         // Start de sessie en sla e-mail op
-                        $_SESSION['name'] = $gebruiker['name'];
+                        $_SESSION['name'] = $name['name'];
 
                         // Redirect naar index.php na succesvolle login, header functie werkte niet
                         echo "<script>window.location.href='index.php';</script>";

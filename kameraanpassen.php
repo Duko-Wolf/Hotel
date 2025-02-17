@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styling/index.css"/>
     <title>Weerstation Den Hoorn, Texel</title>
-    <?php include('includes/navbar.php'); ?>
+    
     
 </head>
 
 <body>
+<?php include('includes/navbar.php'); ?>
     <div class="weather-container">
         <h1>straatnaam 85, alkmaar</h1>
         <img class="icon" src="" alt="Weericoon">
