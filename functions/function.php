@@ -7,8 +7,8 @@ function dbConnect()
     $servername = "localhost";
     $database = "hotel";
     $dsn = "mysql:host=$servername;dbname=$database";
-    $gebruikername = "bit_academy";
-    $wachtwoord = "bit_academy";
+    $gebruikername = "root";
+    $wachtwoord = "";
     //database aanmaken met pdo functie
     $conn = new PDO($dsn, $gebruikername, $wachtwoord);
     //geeft de connectie terug
