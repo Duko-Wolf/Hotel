@@ -20,7 +20,7 @@
         <section>
             <article> <br>
                 <h2>Contactformulier</h2>
-                <form action="#" method="post">
+                <form action="#" method="post" class="contactForm">
                     <label for="name">Naam:</label><br>
                     <input type="text" id="name" name="name" required><br><br>
 
@@ -48,7 +48,7 @@
     <?php include('includes/footer.php'); ?>
     <script>
         // WARNING:  Alert message when form is submitted - Will be replaced with actual form handling later
-        const form = document.querySelector('form');
+        const form = document.querySelector('.contactForm');
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             alert('Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.');

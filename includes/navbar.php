@@ -37,7 +37,7 @@
 
             echo '
                     <form method="post">
-                        <button class=" text-light nav-link btn btn-danger" type="submit" name="Uitlog">Uitlog</button>
+                        <button class=" text-light nav-link btn btn-danger" name="Uitlog">Uitlog</button>
                     </form>
                     ';
                     // al heb je op uitlog gedrukt dan vernietigt hij de sessie email

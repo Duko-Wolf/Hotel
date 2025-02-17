@@ -15,8 +15,6 @@
 
 
     <main>
-
-
         <section>
             <article> <br>
                 <h2>Contactformulier</h2>
@@ -46,14 +44,6 @@
     </main>
 
     <?php include('includes/footer.php'); ?>
-    <script>
-        // WARNING:  Alert message when form is submitted - Will be replaced with actual form handling later
-        const form = document.querySelector('form');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.');
-        });
-    </script>
 </body>
 
 </html>
