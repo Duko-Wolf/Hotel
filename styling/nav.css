@@ -2,16 +2,16 @@ nav {
     background-color: #F9F58B;
     text-align: center;
     justify-self: center;
-    margin: 0 auto;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
  
   nav > ul {
     list-style-type: none;
-    width: 80%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   
   .logo {  

@@ -19,13 +19,13 @@
             <article> <br>
                 <h2>Contactformulier</h2>
                 <form action="#" method="post">
-                    <label for="name">kamernaam</label><br>
+                    <label for="name">Kamernaam:</label><br>
                     <input type="text" id="name" name="name" required><br><br>
 
-                    <label for="email">kamer beschrijving</label><br>
+                    <label for="email">Kamer beschrijving:</label><br>
                     <input type="email" id="email" name="email" required><br><br>
 
-                    <label for="question">prijs</label><br>
+                    <label for="question">Prijs:</label><br>
                     <textarea id="question" name="question" rows="1" required></textarea><br><br>
 
                     <input type="submit" value="Verstuur">

@@ -1,6 +1,5 @@
 <nav>
     <link rel="stylesheet" href="styling/nav.css" />
-    <link rel="stylesheet" href="styling/nav.css" />
     <ul>
         <li>
             <a class="logoContainer" href="index.php">
@@ -24,29 +23,23 @@
             <a href="contact.php">Contact</a>
         </li>
 
-        <!--<li>
-            <a href="weer.php">Het Weer</a>
-        </li> -->
+        <li>
+            <a href="Kameraanpassen.php">Kamer Aanpassen</a>
+        </li>
 
-        <?php
-        if (isset($_SESSION['name'])) {
-            //uitlog
-            echo '<li>';
-            echo '<a href="kameraanpassen.php">Kamer Aanpassen</a>';
-            echo '</li>';
-
-            echo '
-                    <form method="post">
-                        <button class=" text-light nav-link btn btn-danger" name="Uitlog">Uitlog</button>
-                    </form>
-                    ';
-                    // al heb je op uitlog gedrukt dan vernietigt hij de sessie email
-                    if (isset($_POST["Uitlog"])) {
-                        session_destroy();
-                        header("Refresh:0");
-                    }
-        }
-        ?>
-
+        <?php if (isset($_SESSION['name'])): ?>
+            <li>
+                <form method="post">
+                    <button class="text-light nav-link btn btn-danger" name="Uitlog">Uitlog</button>
+                </form>
+            </li>
+            <?php
+                // al heb je op uitlog gedrukt dan vernietigt hij de sessie email
+                if (isset($_POST["Uitlog"])) {
+                    session_destroy();
+                    header("Refresh:0");
+                }
+            ?>
+        <?php endif; ?>
     </ul>
 </nav>
