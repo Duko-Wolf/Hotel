@@ -21,14 +21,14 @@
             <article> <br>
                 <h2>Contactformulier</h2>
                 <form action="#" method="post">
-                    <label for="name">Naam:</label><br>
+                    <label for="name">kamernaam</label><br>
                     <input type="text" id="name" name="name" required><br><br>
 
-                    <label for="email">Email:</label><br>
+                    <label for="email">kamer beschrijving</label><br>
                     <input type="email" id="email" name="email" required><br><br>
 
-                    <label for="question">Vraag:</label><br>
-                    <textarea id="question" name="question" rows="4" required></textarea><br><br>
+                    <label for="question">prijs</label><br>
+                    <textarea id="question" name="question" rows="1" required></textarea><br><br>
 
                     <input type="submit" value="Verstuur">
                 </form>
