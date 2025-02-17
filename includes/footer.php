@@ -28,9 +28,9 @@
             <p class="weather-info">Wind: <span class="wind"></span> m/s</p>
         </div>
 
-        <?php if(!isset($_SESSION['user_id'])): ?>
+        <?php if(!isset($_SESSION['name'])): ?>
             <button class="footer-button" onclick="window.location.href='admin.php'">
-                admin?
+                .
             </button>
         <?php endif; ?>
 
