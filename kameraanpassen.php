@@ -1,52 +1,59 @@
 <?php include('includes/session.php') ?>
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styling/index.css"/>
-    <title>Weerstation Den Hoorn, Texel</title>
-    
-    
+    <link rel="stylesheet" href="styling/index.css" />
+    <title>Contact</title>
 </head>
 
 <body>
-<?php include('includes/navbar.php'); ?>
-    <div class="weather-container">
-        <h1>straatnaam 85, alkmaar</h1>
-        <img class="icon" src="" alt="Weericoon">
-        <p class="weather-info">Temperatuur: <span class="temperature"></span>°C</p>
-        <p class="weather-info">Weersomstandigheden: <span class="condition"></span></p>
-        <p class="weather-info">Luchtvochtigheid: <span class="humidity"></span>%</p>
-        <p class="weather-info">Wind: <span class="wind"></span> m/s</p>
-    </div>
+    <?php include('includes/navbar.php'); ?>
+    <?php include('includes/header.php'); ?>
 
+
+    <main>
+
+
+        <section>
+            <article> <br>
+                <h2>Contactformulier</h2>
+                <form action="#" method="post">
+                    <label for="name">Naam:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="question">Vraag:</label><br>
+                    <textarea id="question" name="question" rows="4" required></textarea><br><br>
+
+                    <input type="submit" value="Verstuur">
+                </form>
+            </article>
+        </section>
+
+        <section>
+            <article> <br>
+                <h2>Contactgegevens</h2>
+                <p>Telefoonnummer: +31 123 456 789</p>
+                <p>Adres: Straatnaam 85, 1234 AB Alkmaar</p>
+                <p>Email: info@hotelzonnevallei.nl</p>
+            </article>
+        </section>
+    </main>
+
+    <?php include('includes/footer.php'); ?>
     <script>
-        const apiKey = "33b5b57a69b7839e80af65a616547cb1";  
-        const city = "alkmaar,NL";  
-        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=nl&appid=${apiKey}`;
-
-        function getWeatherData() {
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-
-                    document.querySelector('.temperature').textContent = data.main.temp;
-                    document.querySelector('.condition').textContent = data.weather[0].description;
-                    document.querySelector('.humidity').textContent = data.main.humidity;
-                    document.querySelector('.wind').textContent = data.wind.speed;
-                    
-                    const iconUrl = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
-                    document.querySelector('.icon').src = iconUrl;
-                })
-                .catch(error => {
-                    console.error("Er is een fout opgetreden:", error);
-                    alert("Er is een probleem met het ophalen van de weergegevens.");
-                });
-        }
-
-        getWeatherData();
-        setInterval(getWeatherData, 300000); 
+        // WARNING:  Alert message when form is submitted - Will be replaced with actual form handling later
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.');
+        });
     </script>
 </body>
+
 </html>
