@@ -71,14 +71,13 @@ function kamerToevoegen($conn)
         // try catch voor pdo zodat hij niet crasht
         try {
             // zet statement klaar en bind de variabelen aan de values van de statement
-            $stmtUpdate = $conn->prepare("INSERT INTO `gebruikers` (`kamerNaam`, `kamerBeschrijving`, `prijs`) 
+            $stmtUpdate = $conn->prepare("INSERT INTO `kamers` (`kamerNaam`, `kamerBeschrijving`, `prijs`) 
             VALUES (:kamerNaam, :kamerBeschrijving, :prijs)");
 
             $stmtUpdate->bindParam(':kamerNaam', $kamerNaam);
             $stmtUpdate->bindParam(':kamerBeschrijving', $kamerBeschrijving);
             $stmtUpdate->bindParam(':prijs', $prijs);
 
-            // kijkt of het wachtwoord en herhaal wachtwoord het zelfde zijn
             if ($stmtUpdate->execute()) {
                 echo "<script type=\"text/javascript\">toastr.success('registered successfully!')</script>";
                 exit();

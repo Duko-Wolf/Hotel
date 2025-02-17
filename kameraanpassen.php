@@ -13,7 +13,17 @@
     <?php include('includes/navbar.php'); ?>
     <?php include('includes/header.php'); ?>
 
+    <?php
 
+    include("functions/function.php");
+
+    $conn = dbConnect();
+
+    if (!isset($_SESSION['name'])) {
+        header("Location: index.php");
+        exit();
+    }
+    ?>
     <main>
         <section>
             <article> <br>
@@ -23,15 +33,25 @@
                     <input type="text" id="name" name="name" required><br><br>
 
                     <label for="email">kamer beschrijving</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
+                    <input type="text" id="email" name="email" required><br><br>
 
                     <label for="question">prijs</label><br>
                     <textarea id="question" name="question" rows="1" required></textarea><br><br>
 
-                    <input type="submit" value="Verstuur">
+                    <input type="submit" value="submit">
                 </form>
             </article>
         </section>
+
+        <?php
+    require_once 'functions\function.php';
+
+    $conn = dbConnect();
+
+    
+    kamerToevoegen($conn);
+
+    ?>
 
         <section>
             <article> <br>
