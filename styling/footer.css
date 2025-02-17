@@ -1,5 +1,21 @@
 footer {
     align-items: center;
-height: auto;
-border: 3px solid black;
+    height: auto;
+    border: 3px solid black;
+    position: relative; /* Voeg dit toe om absolute positionering binnen de footer mogelijk te maken */
+}
+
+.footer-button {
+    position: absolute;
+    right: 20px; /* Pas dit aan naar wens */
+    top: 50%; /* Plaats de knop verticaal in het midden */
+    transform: translateY(-50%); /* Centreer de knop verticaal */
+    background-color: #fff;
+    color: #fff;
+    border: none; /* Verwijder de zwarte border */
+    cursor: pointer;
+}
+
+.footer-button:hover {
+    background-color: #fff;
 }

@@ -89,8 +89,8 @@
                 </p>
             </article>
         </section>
-        <?php include('includes/footer.php'); ?>
+        
     </main>
 </body>
-
+<?php include('includes/footer.php'); ?>
 </html>

@@ -51,8 +51,7 @@
                  Of u nu winkelt in de boetiekjes, geniet van een drankje op een van de vele terrassen of een ontspannen wandeling maakt langs de grachten, Alkmaar biedt voor ieder wat wils. Ontdek de schoonheid en charme van deze historische stad tijdens uw verblijf in ons hotel</p>
             </article> <br>
         </section>
-    </main>
-
-    <!-- <?php include('includes/footer.php'); ?> -->
+    </main> 
 </body>
+<?php include('includes/footer.php'); ?> 
 </html>

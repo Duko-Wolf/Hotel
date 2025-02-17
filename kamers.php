@@ -53,8 +53,8 @@
             <p>Onze Bruidssuite is de ultieme romantische ontsnapping voor pasgetrouwde stellen. Deze luxueuze suite biedt een ruime slaapkamer met een kingsize bed, een stijlvolle woonkamer en een eigen balkon met een prachtig uitzicht op Alkmaar. 
                 Geniet van extra's zoals een bubbelbad, rozenblaadjes op het bed en een fles champagne om uw speciale gelegenheid te vieren in stijl.</p>
         </article> <br>
-    </section>
-    <?php include('includes/footer.php'); ?>
+    </section>  
 </main>
-</body>
+</body> 
+<?php include('includes/footer.php'); ?>
 </html>

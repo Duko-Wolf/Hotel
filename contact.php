@@ -45,7 +45,6 @@
         </section>
     </main>
 
-    <?php include('includes/footer.php'); ?>
     <script>
         // WARNING:  Alert message when form is submitted - Will be replaced with actual form handling later
         const form = document.querySelector('.contactForm');
@@ -55,5 +54,6 @@
         });
     </script>
 </body>
+<?php include('includes/footer.php'); ?>
 
 </html>

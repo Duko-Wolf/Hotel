@@ -1,5 +1,5 @@
 <nav>
-    <link rel="stylesheet" href="reset/nav.css" />
+    <link rel="stylesheet" href="styling/nav.css" />
     <link rel="stylesheet" href="styling/nav.css" />
     <ul>
         <li>
@@ -32,7 +32,7 @@
         if (isset($_SESSION['name'])) {
             //uitlog
             echo '<li>';
-            echo '<a href="kameraanpassen.php">Het Weer</a>';
+            echo '<a href="kameraanpassen.php">Kamer Aanpassen</a>';
             echo '</li>';
 
             echo '

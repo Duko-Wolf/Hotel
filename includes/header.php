@@ -1,5 +1,5 @@
 <header>
-<link rel="stylesheet" href="reset/nav.css"/>
+<link rel="stylesheet" href="styling/nav.css"/>
 <link rel="stylesheet" href="styling/header.css"/>
 
 

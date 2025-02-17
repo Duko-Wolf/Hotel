@@ -1,5 +1,4 @@
-
-        <footer>
+<footer>
         <link rel="stylesheet" href="styling/reset.css"/>
         <link rel="stylesheet" href="styling/footer.css"/>
         <ul>
@@ -9,7 +8,7 @@
             <li>
                 <p>Info over eventuele andere locaties</p>
             </li>
-            <li>
+            <!-- <li>
                 <a href="imglogo"><img src="example.gif" alt="examplehtml"></a>
             </li>
             <li>
@@ -17,19 +16,19 @@
             </li>
             <li>
                 <a href="imglogo"><img src="example.gif" alt="examplehtml"></a>
-            </li>
+            </li> -->
         </ul>
 
 <div class="wheater">
         <div class="weather-container">
             <h1>Straatnaam 85, Alkmaar</h1>
-            <img class="icon" src="" alt="Weericoon">
             <p class="weather-info">Temperatuur: <span class="temperature"></span>°C</p>
             <p class="weather-info">Weersomstandigheden: <span class="condition"></span></p>
             <p class="weather-info">Luchtvochtigheid: <span class="humidity"></span>%</p>
             <p class="weather-info">Wind: <span class="wind"></span> m/s</p>
         </div>
-   
+
+        <button class="footer-button" onclick="window.location.href='admin.php'">admin?</button>
 
     <script>
         const apiKey = "33b5b57a69b7839e80af65a616547cb1";  
@@ -46,17 +45,15 @@
                     document.querySelector('.wind').textContent = data.wind.speed;
                     
                     const iconUrl = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
-                    document.querySelector('.icon').src = iconUrl;
                 })
                 .catch(error => {
                     console.error("Er is een fout opgetreden:", error);
                     alert("Er is een probleem met het ophalen van de weergegevens.");
                 });
         }
-
-        getWeatherData();
+        document.addEventListener("DOMContentLoaded", getWeatherData);
         setInterval(getWeatherData, 300000);
 
-        </div> 
+ 
     </script>
 </footer>

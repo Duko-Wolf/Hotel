@@ -58,8 +58,8 @@
                     creëren van de unieke sfeer en ervaring waar Hotel De Zonne Vallei om bekend staat.</p>
             </article> <br>
         </section> <br>
-        <?php include('includes/footer.php'); ?>
+       
     </main>
 </body>
-
+<?php include('includes/footer.php'); ?>
 </html>
