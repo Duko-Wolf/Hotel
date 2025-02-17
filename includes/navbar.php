@@ -35,12 +35,6 @@
             echo '<a href="kameraanpassen.php">Het Weer</a>';
             echo '</li>';
 
-            if (isset($_POST["Uitlog"])) {
-                session_destroy();
-                header("Refresh:0");
-         
-            }
-
             echo '
                     <form method="post">
                         <button class=" text-light nav-link btn btn-danger" type="submit" name="Uitlog">Uitlog</button>
