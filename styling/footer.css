@@ -3,6 +3,8 @@ footer {
     height: auto;
     border: 3px solid black;
     position: relative; /* Voeg dit toe om absolute positionering binnen de footer mogelijk te maken */
+    background-color: #F9F58B; /* Verander de achtergrondkleur van de footer */
+    color: #B5925C; /* Verander de tekstkleur in de footer */
 }
 
 .footer-button {
@@ -18,4 +20,12 @@ footer {
 
 .footer-button:hover {
     background-color: #fff;
+}
+
+footer a {
+    color: #fff; /* Verander de kleur van links in de footer */
+}
+
+footer .weather-container {
+    color: #B5925C; /* Verander de tekstkleur in de weercontainer */
 }
