@@ -12,14 +12,14 @@ footer {
     right: 20px; /* Pas dit aan naar wens */
     top: 50%; /* Plaats de knop verticaal in het midden */
     transform: translateY(-50%); /* Centreer de knop verticaal */
-    background-color: #fafafa;
+    background-color: #F9F58B;
     color: #961818;
     border: none; /* Verwijder de zwarte border */
     cursor: pointer;
 }
 
 .footer-button:hover {
-    background-color: #fff;
+    background-color: #F9F58B;
 }
 
 footer a {

@@ -1,12 +1,12 @@
 <footer>
     <link rel="stylesheet" href="styling/footer.css"/>
     <ul>
-        <li>
+        <!-- <li>
             <p>Informatie over locatie hier</p>
         </li>
         <li>
             <p>Info over eventuele andere locaties</p>
-        </li> 
+        </li>  -->
         <!-- <li>
             <a href="imglogo"><img src="example.gif" alt="examplehtml"></a>
         </li>
