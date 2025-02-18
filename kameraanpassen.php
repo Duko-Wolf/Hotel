@@ -23,12 +23,14 @@
         <section>
             <article> <br>
                 <h2>Contactformulier</h2>
-                <form action="kameraanpassen.php" method="post">
+                <form action="kameraanpassen.php" method="post" enctype="multipart/form-data">
                     <label for="name">Kamernaam:</label><br>
                     <input type="text" id="name" name="kamerNaam" required><br><br>
 
                     <label for="email">Kamer beschrijving:</label><br>
                     <input type="text" id="email" name="kamerBeschrijving" required><br><br>
+
+                    <input type="file" name="fileToUpload" id="fileToUpload"><br>
 
                     <label for="question">Prijs:</label><br>
                     <input type="text" name="prijs"></textarea><br><br>
