@@ -1,5 +1,4 @@
 <footer>
-    <link rel="stylesheet" href="styling/reset.css"/>
     <link rel="stylesheet" href="styling/footer.css"/>
     <ul>
         <li>
@@ -7,7 +6,7 @@
         </li>
         <li>
             <p>Info over eventuele andere locaties</p>
-        </li> <br>
+        </li> 
         <!-- <li>
             <a href="imglogo"><img src="example.gif" alt="examplehtml"></a>
         </li>
@@ -21,7 +20,7 @@
 
     <div class="wheater">
         <div class="weather-container">
-            <h1>Straatnaam 85, Alkmaar</h1>
+            <h2>Straatnaam 85, Alkmaar</h2>
             <p class="weather-info">Temperatuur: <span class="temperature"></span>°C</p>
             <p class="weather-info">Weersomstandigheden: <span class="condition"></span></p>
             <p class="weather-info">Luchtvochtigheid: <span class="humidity"></span>%</p>

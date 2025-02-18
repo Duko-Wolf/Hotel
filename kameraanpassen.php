@@ -12,16 +12,12 @@
 <body>
     <?php include('includes/navbar.php'); ?>
     <?php include('includes/header.php'); ?>
-    <?php
 
-    include("functions/function.php");
-
-    $conn = dbConnect();
 
     ?>
     <main>
         <section>
-            <article> <br>
+            <article> 
                 <h2>Contactformulier</h2>
                 <form action="kameraanpassen.php" method="post" enctype="multipart/form-data">
                     <label for="name">Kamernaam:</label><br>
@@ -54,7 +50,9 @@
 
 
 
-    <?php include('includes/footer.php'); ?>
+
+
+<?php include('includes/footer.php'); ?>
 </body>
 
 </html>

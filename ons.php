@@ -13,18 +13,16 @@
     <?php include('includes/navbar.php'); ?>
     <?php include('includes/header.php'); ?>
 
-
-
     <main>
         <section>
-            <article> <br>
+            <article> 
                 <h1>Welkom bij Hotel De Zonne Vallei</h1>
                 <p>Bij Hotel De Zonne Vallei streven we ernaar om elke gast een onvergetelijke ervaring te bieden,
                     doordrenkt met luxe, comfort en uitzonderlijke gastvrijheid.
                     Gelegen in het hart van Alkmaar, biedt ons hotel de perfecte uitvalsbasis om deze historische en
                     charmante stad te ontdekken.
                 </p>
-            </article> <br>
+            </article> 
         </section>
 
         <section>
@@ -35,7 +33,7 @@
                     Met jarenlange ervaring in de horeca-industrie heeft Bouke zijn droom verwezenlijkt om een uniek
                     hotel te creëren waar gasten zich thuis voelen en kunnen genieten van alle gemakken en luxe die het
                     leven te bieden heeft.</p>
-            </article> <br>
+            </article> 
         </section>
 
         <section>
@@ -46,7 +44,7 @@
                     kamers tot de culinaire hoogstandjes in ons restaurant.
                     Ons toegewijde team staat altijd klaar om aan al uw wensen te voldoen en ervoor te zorgen dat uw
                     verblijf zo aangenaam mogelijk is.</p>
-            </article> <br>
+            </article> 
         </section>
 
         <section>
@@ -56,10 +54,11 @@
                     een warm welkom en een onvergetelijk verblijf te bieden.
                     Van de receptie tot het restaurant en de huishouding, elk teamlid speelt een cruciale rol in het
                     creëren van de unieke sfeer en ervaring waar Hotel De Zonne Vallei om bekend staat.</p>
-            </article> <br>
-        </section> <br>
+            </article> 
+        </section> 
        
     </main>
-</body>
 <?php include('includes/footer.php'); ?>
+</body>
+
 </html>

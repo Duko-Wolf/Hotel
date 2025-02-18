@@ -18,17 +18,17 @@
 
 
         <section>
-            <article> <br>
+            <article> 
                 <h2>Contactformulier</h2>
                 <form action="#" method="post" class="contactForm">
-                    <label for="name">Naam:</label><br>
-                    <input type="text" id="name" name="name" required><br><br>
+                    <label for="name">Naam:</label>
+                    <input type="text" id="name" name="name" required>
 
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
 
-                    <label for="question">Vraag:</label><br>
-                    <textarea id="question" name="question" rows="4" required></textarea><br><br>
+                    <label for="question">Vraag:</label>
+                    <textarea id="question" name="question" rows="4" required></textarea>
 
                     <input type="submit" value="Verstuur">
                 </form>
@@ -36,11 +36,11 @@
         </section>
 
         <section>
-            <article> <br>
+            <article> 
                 <h2>Contactgegevens</h2>
                 <p>Telefoonnummer: +31 123 456 789</p>
                 <p>Adres: Straatnaam 85, 1234 AB Alkmaar</p>
-                <p>Email: info@hotelzonnevallei.nl</p> <br>
+                <p>Email: info@hotelzonnevallei.nl</p> 
             </article>
         </section>
     </main>
@@ -53,7 +53,8 @@
             // alert('Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.');
         });
     </script>
-</body>
 <?php include('includes/footer.php'); ?>
+</body>
+
 
 </html>
