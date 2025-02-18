@@ -1,3 +1,4 @@
+<?php include('includes/session.php') ?>
 <?php
 require 'functions/function.php'; // Inclusief het database verbindingsbestand
 

@@ -63,7 +63,7 @@ function login($conn)
 function kamerToevoegen($conn)
 {
     // kijkt of de knop is ingeklit en daarna vult nieuwe variabelen met waardes van de input velden
-    if (isset($_POST['submit'])) {
+    if (isset($_POST['verstuur'])) {
         $kamerNaam = $_POST['kamerNaam'];
         $kamerBeschrijving = $_POST['kamerBeschrijving'];
         $prijs = $_POST['prijs'];
@@ -71,7 +71,7 @@ function kamerToevoegen($conn)
         // try catch voor pdo zodat hij niet crasht
         try {
             // zet statement klaar en bind de variabelen aan de values van de statement
-            $stmtUpdate = $conn->prepare("INSERT INTO `gebruikers` (`kamerNaam`, `kamerBeschrijving`, `prijs`) 
+            $stmtUpdate = $conn->prepare("INSERT INTO `kamers` (`kamerNaam`, `kamerBeschrijving`, `prijs`) 
             VALUES (:kamerNaam, :kamerBeschrijving, :prijs)");
 
             $stmtUpdate->bindParam(':kamerNaam', $kamerNaam);

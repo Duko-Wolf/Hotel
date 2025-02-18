@@ -12,36 +12,45 @@
 <body>
     <?php include('includes/navbar.php'); ?>
     <?php include('includes/header.php'); ?>
+    <?php
 
+    include("functions/function.php");
 
+    $conn = dbConnect();
+
+    ?>
     <main>
         <section>
             <article> <br>
                 <h2>Contactformulier</h2>
-                <form action="#" method="post">
+                <form action="kameraanpassen.php" method="post">
                     <label for="name">Kamernaam:</label><br>
-                    <input type="text" id="name" name="name" required><br><br>
+                    <input type="text" id="name" name="kamerNaam" required><br><br>
 
                     <label for="email">Kamer beschrijving:</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
+                    <input type="text" id="email" name="kamerBeschrijving" required><br><br>
 
                     <label for="question">Prijs:</label><br>
-                    <textarea id="question" name="question" rows="1" required></textarea><br><br>
+                    <input type="text" name="prijs"></textarea><br><br>
 
-                    <input type="submit" value="Verstuur">
+                    <input type="submit" value="verstuur" name="verstuur">
                 </form>
             </article>
         </section>
 
-        <section>
-            <article> <br>
-                <h2>Contactgegevens</h2>
-                <p>Telefoonnummer: +31 123 456 789</p>
-                <p>Adres: Straatnaam 85, 1234 AB Alkmaar</p>
-                <p>Email: info@hotelzonnevallei.nl</p> <br>
-            </article>
-        </section>
+        <?php
+        // import functions.php
+        require_once 'functions\function.php';
+
+        $conn = dbConnect();
+
+        // use function login() from functions.php
+        kamerToevoegen($conn);
+
+        ?>
     </main>
+
+
 
     <?php include('includes/footer.php'); ?>
 </body>
