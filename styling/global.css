@@ -1,0 +1,95 @@
+@import url(reset.css);
+
+@import url(index.css);
+@import url(header.css);
+@import url(nav.css);
+@import url(footer.css);
+
+:root{
+    --primary-color: #B5925C;
+    --secondary-color: #F9F58B;
+    --tertiary-color: #444;
+}
+
+
+* {
+    font-family: 'Arial Rounded MT Bold', 'Roboto', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+/* navigation */
+nav {
+    background-color: #F9F58B;
+    text-align: center;
+    justify-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+nav > ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.logo {  
+    max-width: 75px;
+}
+
+nav > ul :hover {
+    text-decoration: none;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: linear-gradient(); 
+}
+
+nav a {
+    display: inline-block;
+    padding: 1.5rem;
+    margin: 0.1rem;
+    background-color: transparent; /* Verwijder de achtergrondkleur */
+    color: #B5925C; /* Voeg deze regel toe om de tekstkleur aan te passen */
+}
+
+nav li {
+    margin: 0 7rem; /* Voeg marge toe aan de linker- en rechterkant van elk li-element */
+}
+
+.logoContainer {  
+    max-width: 100px;
+    padding: 0;
+    padding: 1rem;
+    background-color: #B5925C; /* Houd de achtergrondkleur voor het logo */
+    border-radius: 0.5rem;
+    /* color: #B5925C; /* Voeg deze regel toe om de tekstkleur van het logo aan te passen */
+}
+
+
+
+
+
+section{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+footer {
+    background-color: var(--secondary-color); /* Same color as the header */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}

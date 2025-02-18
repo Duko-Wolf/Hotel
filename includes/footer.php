@@ -1,5 +1,5 @@
 <footer>
-    <link rel="stylesheet" href="styling/footer.css"/>
+
     <ul>
         <!-- <li>
             <p>Informatie over locatie hier</p>

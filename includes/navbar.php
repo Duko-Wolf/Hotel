@@ -1,49 +1,32 @@
 <nav>
-    <link rel="stylesheet" href="styling/nav.css" />
-    <ul>
-        <li>
-            <a class="logoContainer" href="index.php">
-                <img class="logo" src="images/img-logo/logo.png" alt="">
-            </a>
-        </li>
+    <a class="logoContainer" href="index.php">
+        <img class="logo" src="images/img-logo/logo.png" alt="">
+    </a>
 
-        <li>
-            <a href="kamers.php">Kamers</a>
-        </li>
+    <a href="kamers.php">Kamers</a>
 
-        <li>
-            <a href="restaurant.php">Restaurant</a>
-        </li>
+    <a href="restaurant.php">Restaurant</a>
 
-        <li>
-            <a href="ons.php">Over ons</a>
-        </li>
+    <a href="ons.php">Over ons</a>
 
-        <li>
-            <a href="contact.php">Contact</a>
-        </li>
+    <a href="contact.php">Contact</a>
 
+    <?php if (isset($_SESSION['name'])): ?>
 
+    <a href="Kameraanpassen.php">Kamer Aanpassen</a>
 
-        <?php if (isset($_SESSION['name'])): ?>
-            <li>
-                <a href="Kameraanpassen.php">Kamer Aanpassen</a>
-            </li>
+    <form method="post">
+        <button class="text-light nav-link btn btn-danger" name="Uitlog">Uitlog</button>
+    </form>
 
-            <li>
-                <form method="post">
-                    <button class="text-light nav-link btn btn-danger" name="Uitlog">Uitlog</button>
-                </form>
-            </li>
+    <?php
+    // al heb je op uitlog gedrukt dan vernietigt hij de sessie email
+    if (isset($_POST["Uitlog"])) {
+        session_destroy();
+        header("Refresh:0");
+    }
+    ?>
+    
+    <?php endif; ?>
 
-
-            <?php
-            // al heb je op uitlog gedrukt dan vernietigt hij de sessie email
-            if (isset($_POST["Uitlog"])) {
-                session_destroy();
-                header("Refresh:0");
-            }
-            ?>
-        <?php endif; ?>
-    </ul>
 </nav>
