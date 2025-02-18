@@ -81,14 +81,11 @@ section{
 
 
 
-
-
 footer {
     background-color: var(--secondary-color); /* Same color as the header */
     color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
+    padding: 10px 0;
     bottom: 0;
     width: 100%;
     z-index: 1000;
