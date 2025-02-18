@@ -24,7 +24,7 @@
                     <label for="email">Kamer beschrijving:</label>
                     <input type="text" id="email" name="kamerBeschrijving" required>
 
-                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <input type="file" name="photo" id="fileToUpload">
 
                     <label for="question">Prijs:</label>
                     <input type="text" name="prijs"></textarea>

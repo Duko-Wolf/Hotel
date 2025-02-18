@@ -32,6 +32,10 @@ main {
     margin: 0 auto;
 }
 
+body {
+    padding: 0 auto;
+}
+
 form {
     display: flex;
     flex-direction: column;
