@@ -1,22 +1,6 @@
 <footer>
 
-    <ul>
-        <!-- <li>
-            <p>Informatie over locatie hier</p>
-        </li>
-        <li>
-            <p>Info over eventuele andere locaties</p>
-        </li>  -->
-        <!-- <li>
-            <a href="imglogo"><img src="example.gif" alt="examplehtml"></a>
-        </li>
-        <li>
-            <a href="imglogo"><img src="example.gif" alt="examplehtml"></a>
-        </li>
-        <li>
-            <a href="imglogo"><img src="example.gif" alt="examplehtml"></a>
-        </li> -->
-    </ul>
+
 
     <div class="wheater">
         <div class="weather-container">
@@ -28,9 +12,9 @@
         </div>
 
         <?php if(!isset($_SESSION['name'])): ?>
-            <button class="footer-button" onclick="window.location.href='admin.php'">
-                .
-            </button>
+            
+            
+          
         <?php endif; ?>
 
         <script>
@@ -57,5 +41,6 @@
             document.addEventListener("DOMContentLoaded", getWeatherData);
             setInterval(getWeatherData, 300000);
         </script>
+        <a class="footer-button" href="admin.php">.</a>
     </div>
 </footer>

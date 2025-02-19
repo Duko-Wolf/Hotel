@@ -1,9 +1,7 @@
 @import url(reset.css);
-
-@import url(index.css);
 @import url(header.css);
-@import url(nav.css);
-@import url(footer.css);
+
+
 
 :root{
     --primary-color: #B5925C;
@@ -13,7 +11,7 @@
 
 
 * {
-    font-family: 'Arial Rounded MT Bold', 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: 'Varela Round','Arial Rounded MT Bold', 'Roboto', Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
 /* navigation */
@@ -58,17 +56,10 @@ nav li {
 
 .logoContainer {  
     max-width: 100px;
-    padding: 0;
-    padding: 1rem;
-    background-color: #B5925C; /* Houd de achtergrondkleur voor het logo */
-    border-radius: 0.5rem;
+    padding: 1rem; 
     /* color: #B5925C; /* Voeg deze regel toe om de tekstkleur van het logo aan te passen */
 }
-
-
-
-
-
+ 
 section{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
@@ -83,10 +74,15 @@ section{
 
 footer {
     background-color: var(--secondary-color); /* Same color as the header */
-    color: white;
-    text-align: center;
+    color: #B5925C;
     padding: 10px 0;
     bottom: 0;
     width: 100%;
     z-index: 1000;
+}
+.footer-button{
+    position: relative;
+    display: inline-block;
+    left: 10px;
+    color: greenyellow;
 }

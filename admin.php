@@ -26,11 +26,11 @@
         exit();
     }
     ?>
-
+ <?php include("includes/navbar.php");
+    ?>
     <?php include("includes/header.php");
     ?>
-    <?php include("includes/navbar.php");
-    ?>
+   
 
     <section class="bg-image" style="margin-bottom: 5%;">
         <div class="container h-90">
