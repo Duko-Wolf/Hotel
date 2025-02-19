@@ -1,6 +1,6 @@
 <nav>
     <a class="logoContainer" href="index.php">
-        <img class="logo" src="/Hotel/images/img-logo/logo variant 1.png" alt="">
+        <img class="logo" src="images/img-logo/logo variant 1.png" alt="">
     </a>
 
     <a href="kamers.php">Kamers</a>
