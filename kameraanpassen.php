@@ -11,11 +11,20 @@
 
 <body>
     <?php include('includes/navbar.php'); ?>
-    <?php include('includes/header.php'); ?>
+    <?php include('includes/header.php'); 
 
+    include("functions/function.php");
+
+    $conn = dbConnect();
+
+    if (!isset($_SESSION['name'])) {
+        header("Location: kameraanpassen.php");
+        exit();
+    }
+    ?>
     <main>
         <section>
-            <article> 
+            <article>
                 <h2>Contactformulier</h2>
                 <form action="#" method="post" enctype="multipart/form-data">
                     <label for="name">Kamernaam:</label>
@@ -50,7 +59,7 @@
 
 
 
-<?php include('includes/footer.php'); ?>
+    <?php include('includes/footer.php'); ?>
 </body>
 
 </html>
