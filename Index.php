@@ -91,7 +91,6 @@
     </main>
     <?php include('includes/footer.php'); ?>
     </main>
-    <?php include('includes/footer.php'); ?>
 </body>
 
 </html>
