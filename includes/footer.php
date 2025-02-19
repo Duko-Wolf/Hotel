@@ -1,7 +1,4 @@
 <footer>
-
-
-
     <div class="wheater">
         <div class="weather-container">
             <h2>Straatnaam 85, Alkmaar</h2>
