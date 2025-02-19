@@ -16,7 +16,6 @@
     <main>
         <section>
             <article>
-                
                 <h2>Welkom bij Hotel De Zonne Vallei</h2>
                 <p>
                     Bij Hotel De Zonne Vallei zijn we trots op ons wereldberoemde restaurant, waar culinaire dromen
@@ -32,65 +31,98 @@
         <section>
             <article>
                 <h2>Menu</h2>
-                <h2>Voorgerechten:</h2>
-                <p>
-                    1. Geroosterde Bietensalade - Met geitenkaas, walnoten en een honing-balsamico dressing.
-                    2. Carpaccio van Rundvlees - Met truffelmayonaise, rucola en Parmezaanse kaas.
-                    3. Gerookte Zalm - Met dillecrème, kappertjes en een citroenpartje.
-                    4. Ravioli met Spinazie en Ricotta - In een romige tomatensaus met basilicum.
-                    5. Gegratineerde Champignons - Gevuld met knoflook en kruiden, geserveerd met knapperig brood.
-                </p>
-
-                
+                <h3>Voorgerechten:</h3>
+                <table>
+                    <tr>
+                        <td>1. Geroosterde Bietensalade met geitenkaas, walnoten en een honing-balsamico dressing.</td>
+                    </tr>
+                    <tr>
+                        <td>2. Carpaccio van Rundvlees met truffelmayonaise, rucola en Parmezaanse kaas.</td>
+                    </tr>
+                    <tr>
+                        <td>3. Gerookte Zalm met dillecrème, kappertjes en een citroenpartje.</td>
+                    </tr>
+                    <tr>
+                        <td>4. Ravioli met Spinazie en Ricotta in een romige tomatensaus met basilicum.</td>
+                    </tr>
+                    <tr>
+                        <td>5. Gegratineerde Champignons gevuld met knoflook en kruiden, geserveerd met knapperig brood.</td>
+                    </tr>
+                </table>
             </article>
         </section>
 
         <section>
             <article>
-                <h2>Hoofdgerechten:
-                </h2>
-                <p>
-                    1. Gegrilde Zalmfilet - Met een citroen-dille saus, geserveerd met seizoensgroenten en
-                    aardappelpuree.
-                    2. Ribeye Steak - Geserveerd met een pepersaus, gegrilde groenten en frietjes.
-                    3. Kipfilet Supreme - Met een champignonroomsaus, gestoofde worteltjes en aardappelgratin.
-                    4. Vegetarische Lasagne - Laagjes pasta, seizoensgroenten, ricotta en tomatensaus, geserveerd met
-                    een frisse salade.
-                    5. Gebakken Zeebaars - Op een bedje van spinazie, geserveerd met rijst en een beurre blanc saus.
-                </p>
-                
+                <h3>Hoofdgerechten:</h3>
+                <table>
+                    <tr>
+                        <td>1. Gegrilde Zalmfilet met een citroen-dille saus, geserveerd met seizoensgroenten en aardappelpuree.</td>
+                    </tr>
+                    <tr>
+                        <td>2. Ribeye Steak geserveerd met een pepersaus, gegrilde groenten en frietjes.</td>
+                    </tr>
+                    <tr>
+                        <td>3. Kipfilet Supreme met een champignonroomsaus, gestoofde worteltjes en aardappelgratin.</td>
+                    </tr>
+                    <tr>
+                        <td>4. Vegetarische Lasagne laagjes pasta, seizoensgroenten, ricotta en tomatensaus, geserveerd met een frisse salade.</td>
+                    </tr>
+                    <tr>
+                        <td>5. Gebakken Zeebaars op een bedje van spinazie, geserveerd met rijst en een beurre blanc saus.</td>
+                    </tr>
+                </table>
             </article>
         </section>
 
         <section>
             <article>
-                <h2>Nagerechten:</h2>
-                <p>
-                    1. Tiramisu - Klassieke Italiaanse dessert met lagen van koffie-geweekte koekjes en mascarpone
-                    crème.
-                    2. Crème Brûlée - Rijke vanille custard met een knapperige gekarameliseerde suikerlaag.
-                    3. Chocolade Fondant - Warme chocoladetaart met een vloeibare kern, geserveerd met vanille-ijs.
-                    4. Lemon Cheesecake - Romige cheesecake met een vleugje citroen en een graham cracker korst.
-                    5. Vers Fruit met Sorbet - Een selectie van seizoensfruit, geserveerd met verfrissende sorbet.
-                </p> 
+                <h3>Nagerechten:</h3>
+                <table>
+                    <tr>
+                        <td>1. Tiramisu klassieke Italiaanse dessert met lagen van koffie-geweekte koekjes en mascarpone crème.</td>
+                    </tr>
+                    <tr>
+                        <td>2. Crème Brûlée rijke vanille custard met een knapperige gekarameliseerde suikerlaag.</td>
+                    </tr>
+                    <tr>
+                        <td>3. Chocolade Fondant warme chocoladetaart met een vloeibare kern, geserveerd met vanille-ijs.</td>
+                    </tr>
+                    <tr>
+                        <td>4. Lemon Cheesecake romige cheesecake met een vleugje citroen en een graham cracker korst.</td>
+                    </tr>
+                    <tr>
+                        <td>5. Vers Fruit met Sorbet een selectie van seizoensfruit, geserveerd met verfrissende sorbet.</td>
+                    </tr>
+                </table>
             </article>
         </section>
 
         <section>
             <article>
-                <h2>KinderMenu:</h2>
-                <p>
-                    1. Mini Burger - Met kaas en frietjes.
-                    2. Kipnuggets - Geserveerd met appelmoes en een kleine salade.
-                    3. Spaghetti Bolognese - Met huisgemaakte tomatensaus.
-                    4. Pannenkoeken - Met stroop en poedersuiker.
-                    5. Fish & Chips - Gebakken vis met frietjes en een beetje ketchup.
-                </p> 
+                <h3>KinderMenu:</h3>
+                <table>
+                    <tr>
+                        <td>1. Mini Burger met kaas en frietjes.</td>
+                    </tr>
+                    <tr>
+                        <td>2. Kipnuggets geserveerd met appelmoes en een kleine salade.</td>
+                    </tr>
+                    <tr>
+                        <td>3. Spaghetti Bolognese met huisgemaakte tomatensaus.</td>
+                    </tr>
+                    <tr>
+                        <td>4. Pannenkoeken met stroop en poedersuiker.</td>
+                    </tr>
+                    <tr>
+                        <td>5. Fish & Chips gebakken vis met frietjes en een beetje ketchup.</td>
+                    </tr>
+                </table>
             </article>
         </section>
         
     </main>
-<?php include('includes/footer.php'); ?>
+    <?php include('includes/footer.php'); ?>
 </body>
 
 </html>
