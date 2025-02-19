@@ -48,21 +48,21 @@ nav a {
     display: inline-block;
     padding: 1.5rem;
     margin: 0.1rem;
-    background-color: transparent; /* Verwijder de achtergrondkleur */
-    color: #B5925C; /* Voeg deze regel toe om de tekstkleur aan te passen */
+    background-color: transparent; 
+    color: #B5925C; 
 }
 
 nav li {
-    margin: 0 7rem; /* Voeg marge toe aan de linker- en rechterkant van elk li-element */
+    margin: 0 7rem; 
 }
 
 .logoContainer {  
     max-width: 100px;
     padding: 0;
     padding: 1rem;
-    background-color: #B5925C; /* Houd de achtergrondkleur voor het logo */
+    background-color: #B5925C; 
     border-radius: 0.5rem;
-    /* color: #B5925C; /* Voeg deze regel toe om de tekstkleur van het logo aan te passen */
+    
 }
 
 
@@ -82,11 +82,26 @@ section{
 
 
 footer {
-    background-color: var(--secondary-color); /* Same color as the header */
+    background-color: var(--secondary-color); 
     color: white;
     text-align: center;
     padding: 10px 0;
     bottom: 0;
     width: 100%;
     z-index: 1000;
+}
+
+table {
+    width: 45%;
+    border-collapse: collapse;
+    margin: 20px auto; 
+    text-align: center; 
+}
+
+th, td {
+    text-align: left;
+}
+
+h2, h3 {
+    text-align: center;
 }
