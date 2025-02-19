@@ -7,7 +7,7 @@ USE hotel;
 CREATE TABLE kamers (
     kamersID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     kamerNaam VARCHAR(255) NOT NULL,
-    kamerBeschrijving VARCHAR(255),
+    kamerBeschrijving TEXT,
     prijs int NOT NULL
 );
 
