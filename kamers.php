@@ -21,7 +21,6 @@ $kamers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
 <?php include('includes/navbar.php'); ?>
 <?php include('includes/header.php'); ?>
-    <h1>Beschikbare Kamers</h1>
 
     <?php foreach ($kamers as $kamer): ?>
         <section class="kamer">

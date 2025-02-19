@@ -1,6 +1,6 @@
 <nav>
     <a class="logoContainer" href="index.php">
-        <img class="logo" src="/Hotel/images/img-logo/logo-variant-1.png" alt="">
+        <img class="logo" src="images/img-logo/logo-variant-1.png" alt="">
     </a>
 
     <a href="kamers.php">Kamers</a>
@@ -20,7 +20,6 @@
     </form>
 
     <?php
-    // al heb je op uitlog gedrukt dan vernietigt hij de sessie email
     if (isset($_POST["Uitlog"])) {
         session_destroy();
         header("Refresh:0");
