@@ -18,7 +18,7 @@
     $conn = dbConnect();
 
     if (!isset($_SESSION['name'])) {
-        header("Location: kameraanpassen.php");
+        header("Location: index.php");
         exit();
     }
     ?>
