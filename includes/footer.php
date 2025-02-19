@@ -41,6 +41,7 @@
             document.addEventListener("DOMContentLoaded", getWeatherData);
             setInterval(getWeatherData, 300000);
         </script>
-        <a class="footer-button" href="admin.php">.</a>
+       
     </div>
+    <a class="footer-button" href="admin.php">.</a>
 </footer>
