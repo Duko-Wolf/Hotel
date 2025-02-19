@@ -46,21 +46,18 @@ nav a {
     display: inline-block;
     padding: 1.5rem;
     margin: 0.1rem;
-    background-color: transparent; 
-    
+    background-color: transparent; /* Verwijder de achtergrondkleur */
+    color: #B5925C; /* Voeg deze regel toe om de tekstkleur aan te passen */
 }
 
 nav li {
-    margin: 0 7rem; 
+    margin: 0 7rem; /* Voeg marge toe aan de linker- en rechterkant van elk li-element */
 }
 
 .logoContainer {  
     max-width: 100px;
-    padding: 0;
-    padding: 1rem;
-    background-color: #B5925C; 
-    border-radius: 0.5rem;
-    
+    padding: 1rem; 
+    /* color: #B5925C; /* Voeg deze regel toe om de tekstkleur van het logo aan te passen */
 }
  
 section{
@@ -72,26 +69,7 @@ section{
     border-radius: 8px;
 }
 
-.contact-section {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-    width: 40%;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-}
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 
 footer {
@@ -102,18 +80,12 @@ footer {
     width: 100%;
     z-index: 1000;
 }
-
-table {
-    width: 45%;
-    border-collapse: collapse;
-    margin: 20px auto; 
-    text-align: center; 
+.footer-button{
+    position: relative;
+    display: inline-block;
+    left: 10px;
+    color: greenyellow;
 }
-
-th, td {
-    text-align: left;
-}
-
-h2, h3 {
+.wheater{
     text-align: center;
 }
