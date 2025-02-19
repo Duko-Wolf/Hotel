@@ -90,3 +90,23 @@ function kamerToevoegen($conn)
         }
     }
 }
+
+function kamerverwijderen($conn) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['kamersID'])) {
+        $kamer_id = $_POST['kamersID'];
+
+        $query = "DELETE FROM kamers WHERE kamersID = :kamersID";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':kamersID', $kamer_id, PDO::PARAM_INT);
+
+        if ($stmt->execute()) {
+            header("Location: kameraanpassen.php"); // Terug naar de lijst na verwijderen
+            exit();
+        } else {
+            echo "Fout bij verwijderen.";
+        }
+    } else {
+        echo "werkt niet";
+        exit();
+    }
+}
