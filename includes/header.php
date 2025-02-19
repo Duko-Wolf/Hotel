@@ -6,7 +6,7 @@
 
       <div class="hero-text">
         <h1>Hotel De Zonne Vallei</h1>
-        <h2>Placeholder</h2>
+        <h2>Uw thuis weg van huis
       </div>
 </div>
 </header>
