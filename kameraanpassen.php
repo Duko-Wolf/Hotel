@@ -11,7 +11,7 @@
 
 <body>
     <?php include('includes/navbar.php'); ?>
-    <?php include('includes/header.php'); 
+    <?php include('includes/header.php');
 
     include("functions/function.php");
 
@@ -21,8 +21,28 @@
         header("Location: index.php");
         exit();
     }
+
+    $query = "SELECT * FROM kamers";
+    $stmt = $conn->prepare($query);
+    $stmt->execute();
+    $kamers = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
     ?>
     <main>
+        <?php foreach ($kamers as $kamer): ?>
+            <section class="kamer">
+                <h2><?= htmlspecialchars($kamer['kamerNaam']) ?></h2>
+                <p><?= htmlspecialchars($kamer['kamerBeschrijving']) ?></p>
+                <p class="prijs">Prijs per nacht: €<?= htmlspecialchars($kamer['prijs']) ?></p>
+                <form method="post" action="#">
+                    <input type="hidden" name="kamersID" value="<?= $kamer['kamersID'] ?>">
+                    <button type="submit" onclick="return confirm('Weet je zeker dat je deze kamer wilt verwijderen?');">
+                        Verwijderen
+                    </button>
+                </form>
+            </section>
+        <?php endforeach; ?>
+
         <section>
             <article>
                 <h2>Contactformulier</h2>
@@ -42,6 +62,31 @@
                 </form>
             </article>
         </section>
+
+
+        <?php
+        require_once 'functions/function.php';
+        $conn = dbConnect();
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['kamersID'])) {
+            $kamer_id = $_POST['kamersID'];
+
+            $query = "DELETE FROM kamers WHERE kamersID = :kamersID";
+            $stmt = $conn->prepare($query);
+            $stmt->bindParam(':kamersID', $kamer_id, PDO::PARAM_INT);
+
+            if ($stmt->execute()) {
+                header("Location: kameraanpassen.php"); // Terug naar de lijst na verwijderen
+                exit();
+            } else {
+                echo "Fout bij verwijderen.";
+            }
+        } else {
+            echo "werkt niet";
+            exit();
+        }
+        ?>
+
 
         <?php
         // import functions.php
