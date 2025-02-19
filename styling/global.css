@@ -73,7 +73,7 @@ section{
 
 
 footer {
-    background-color: var(--secondary-color); /* Same color as the header */
+    background-color: var(--secondary-color); 
     color: #B5925C;
     padding: 10px 0;
     bottom: 0;
