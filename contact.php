@@ -17,8 +17,8 @@
     <main>
 
 
-        <section>
-            <article> 
+        <section class="contact-section">
+            <article class="contact"> 
                 <h2>Contactformulier</h2>
                 <form action="#" method="post" class="contactForm">
                     <label for="name">Naam:</label>
@@ -35,8 +35,8 @@
             </article>
         </section>
 
-        <section>
-            <article> 
+        <section class="contact-section">
+            <article class="contact"> 
                 <h2>Contactgegevens</h2>
                 <p>Telefoonnummer: +31 123 456 789</p>
                 <p>Adres: Straatnaam 85, 1234 AB Alkmaar</p>
