@@ -17,7 +17,7 @@
         <section>
             <article> 
                 <h2>Contactformulier</h2>
-                <form action="kameraanpassen.php" method="post" enctype="multipart/form-data">
+                <form action="#" method="post" enctype="multipart/form-data">
                     <label for="name">Kamernaam:</label>
                     <input type="text" id="name" name="kamerNaam" required>
 
