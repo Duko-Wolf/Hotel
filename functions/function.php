@@ -62,34 +62,61 @@ function login($conn)
 
 function kamerToevoegen($conn)
 {
-    // kijkt of de knop is ingeklit en daarna vult nieuwe variabelen met waardes van de input velden
     if (isset($_POST['verstuur'])) {
         $kamerNaam = $_POST['kamerNaam'];
         $kamerBeschrijving = $_POST['kamerBeschrijving'];
         $prijs = $_POST['prijs'];
+        $targetDir = "uploads/"; // Folder voor foto's
+        $kamerFoto = null; // Standaard null als er geen foto is
 
-        // try catch voor pdo zodat hij niet crasht
+        // Controleer of een bestand is geüpload
+        if (!empty($_FILES["kamerFoto"]["name"])) {
+            $fileName = basename($_FILES["kamerFoto"]["name"]);
+            $fileType = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+            $newFileName = uniqid() . "." . $fileType; // Voorkom naamconflicten
+            $targetFilePath = $targetDir . $newFileName;
+
+            $allowedTypes = ["jpg", "jpeg", "png", "gif"];
+            if (in_array($fileType, $allowedTypes)) {
+                if (!file_exists($targetDir)) {
+                    mkdir($targetDir, 0777, true);
+                }
+
+                // Verplaats bestand naar de uploads-map
+                if (move_uploaded_file($_FILES["kamerFoto"]["tmp_name"], $targetFilePath)) {
+                    $kamerFoto = $newFileName;
+                } else {
+                    echo "Er ging iets mis bij het uploaden van de foto.";
+                    return;
+                }
+            } else {
+                echo "Ongeldig bestandstype. Alleen JPG, JPEG, PNG en GIF zijn toegestaan.";
+                return;
+            }
+        }
+
+        // Probeer de kamer + foto in de database op te slaan
         try {
-            // zet statement klaar en bind de variabelen aan de values van de statement
-            $stmtUpdate = $conn->prepare("INSERT INTO `kamers` (`kamerNaam`, `kamerBeschrijving`, `prijs`) 
-            VALUES (:kamerNaam, :kamerBeschrijving, :prijs)");
+            $stmtUpdate = $conn->prepare("INSERT INTO `kamers` (`kamerNaam`, `kamerBeschrijving`, `prijs`, `kamerFoto`) 
+                                          VALUES (:kamerNaam, :kamerBeschrijving, :prijs, :kamerFoto)");
 
             $stmtUpdate->bindParam(':kamerNaam', $kamerNaam);
             $stmtUpdate->bindParam(':kamerBeschrijving', $kamerBeschrijving);
             $stmtUpdate->bindParam(':prijs', $prijs);
+            $stmtUpdate->bindParam(':kamerFoto', $kamerFoto);
 
-            // kijkt of het wachtwoord en herhaal wachtwoord het zelfde zijn
             if ($stmtUpdate->execute()) {
-                echo "<script type=\"text/javascript\">toastr.success('registered successfully!')</script>";
+                echo "<script type=\"text/javascript\">toastr.success('Kamer succesvol toegevoegd!')</script>";
                 exit();
             } else {
-                echo "er ging iets mis";
+                echo "Er ging iets mis bij het toevoegen van de kamer.";
             }
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
     }
 }
+
 
 function kamerverwijderen($conn) {
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['kamersID'])) {
