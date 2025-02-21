@@ -134,6 +134,22 @@ function kamerverwijderen($conn) {
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['kamersID'])) {
         $kamer_id = $_POST['kamersID'];
 
+        // Stap 1: Haal de bestandsnaam op uit de database
+        $stmt = $conn->prepare("SELECT kamerFoto FROM kamers WHERE kamersID = :kamersID");
+        $stmt->bindParam(':kamersID', $kamer_id, PDO::PARAM_INT);
+        $stmt->execute();
+        $kamer = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($kamer && !empty($kamer['kamerFoto'])) {
+            $fotoPath = "uploads/" . $kamer['kamerFoto'];
+
+            // Stap 2: Controleer of het bestand bestaat en verwijder het
+            if (file_exists($fotoPath)) {
+                unlink($fotoPath); // Verwijder het bestand
+            }
+        }
+
+        // Stap 3: Verwijder de database-entry
         $query = "DELETE FROM kamers WHERE kamersID = :kamersID";
         $stmt = $conn->prepare($query);
         $stmt->bindParam(':kamersID', $kamer_id, PDO::PARAM_INT);
@@ -145,7 +161,7 @@ function kamerverwijderen($conn) {
             echo "Fout bij verwijderen.";
         }
     } else {
-        echo "werkt niet";
+        echo "Ongeldige aanvraag.";
         exit();
     }
 }
