@@ -78,7 +78,7 @@ function kamerToevoegen($conn)
             $newFileName = uniqid() . "." . $fileType;
             $targetFilePath = $targetDir . $newFileName;
 
-            $allowedTypes = ["jpg", "jpeg", "png", "gif"];
+            $allowedTypes = ["jpg", "jpeg", "png"];
 
             if (in_array($fileType, $allowedTypes)) {
                 // Controleer of uploads map bestaat
