@@ -1,4 +1,4 @@
-<?php include('includes/session.php') ?>
+<?php include('includes/session.php'); ?>
 <?php
 require 'functions/function.php'; // Inclusief het database verbindingsbestand
 
@@ -26,7 +26,14 @@ $kamers = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <section class="kamer">
             <h2><?= htmlspecialchars($kamer['kamerNaam']) ?></h2>
             <p><?= htmlspecialchars($kamer['kamerBeschrijving']) ?></p>
-            <p class="prijs">Prijs per nacht: €<?= htmlspecialchars($kamer['prijs']) ?></p>
+            <p class="prijs">Prijs per nacht: €<?= number_format(htmlspecialchars($kamer['prijs']), 2, ',', '.') ?></p>
+
+            <!-- Foto weergeven, als beschikbaar -->
+            <?php if (!empty($kamer['kamerFoto'])): ?>
+                <img src="uploads/<?= htmlspecialchars($kamer['kamerFoto']) ?>" alt="Kamer foto" class="kamerFoto">
+            <?php else: ?>
+                <p>Geen afbeelding beschikbaar</p>
+            <?php endif; ?>
         </section>
     <?php endforeach; ?>
 

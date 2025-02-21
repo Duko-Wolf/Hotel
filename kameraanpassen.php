@@ -63,7 +63,7 @@ $kamers = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <label for="prijs">Prijs:</label>
                 <input type="number" step="0.01" id="prijs" name="prijs" required>
 
-                <input type="file" name="photo">
+                <input type="file" name="kamerFoto">
 
                 <input type="submit" value="Toevoegen" name="verstuur">
             </form>

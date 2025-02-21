@@ -66,27 +66,38 @@ function kamerToevoegen($conn)
         $kamerNaam = $_POST['kamerNaam'];
         $kamerBeschrijving = $_POST['kamerBeschrijving'];
         $prijs = $_POST['prijs'];
-        $targetDir = "uploads/"; // Folder voor foto's
-        $kamerFoto = null; // Standaard null als er geen foto is
+        $targetDir = "uploads/";
+        $kamerFoto = null;
 
-        // Controleer of een bestand is geüpload
+        // Check of er een bestand is geüpload
         if (!empty($_FILES["kamerFoto"]["name"])) {
+            print_r($_FILES["kamerFoto"]); // Debug output
+
             $fileName = basename($_FILES["kamerFoto"]["name"]);
             $fileType = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
-            $newFileName = uniqid() . "." . $fileType; // Voorkom naamconflicten
+            $newFileName = uniqid() . "." . $fileType;
             $targetFilePath = $targetDir . $newFileName;
 
             $allowedTypes = ["jpg", "jpeg", "png", "gif"];
+
             if (in_array($fileType, $allowedTypes)) {
+                // Controleer of uploads map bestaat
                 if (!file_exists($targetDir)) {
                     mkdir($targetDir, 0777, true);
                 }
 
-                // Verplaats bestand naar de uploads-map
+                // Controleer fouten bij uploaden
+                if ($_FILES["kamerFoto"]["error"] !== UPLOAD_ERR_OK) {
+                    echo "Fout bij uploaden: " . $_FILES["kamerFoto"]["error"];
+                    return;
+                }
+
+                // Probeer bestand te verplaatsen
                 if (move_uploaded_file($_FILES["kamerFoto"]["tmp_name"], $targetFilePath)) {
+                    echo "Upload succesvol! Bestand opgeslagen als: " . $targetFilePath;
                     $kamerFoto = $newFileName;
                 } else {
-                    echo "Er ging iets mis bij het uploaden van de foto.";
+                    echo "Upload mislukt! Controleer bestandsrechten.";
                     return;
                 }
             } else {
@@ -95,7 +106,7 @@ function kamerToevoegen($conn)
             }
         }
 
-        // Probeer de kamer + foto in de database op te slaan
+        // Probeer gegevens op te slaan in de database
         try {
             $stmtUpdate = $conn->prepare("INSERT INTO `kamers` (`kamerNaam`, `kamerBeschrijving`, `prijs`, `kamerFoto`) 
                                           VALUES (:kamerNaam, :kamerBeschrijving, :prijs, :kamerFoto)");
@@ -116,6 +127,7 @@ function kamerToevoegen($conn)
         }
     }
 }
+
 
 
 function kamerverwijderen($conn) {
