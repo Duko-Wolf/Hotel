@@ -165,3 +165,40 @@ function kamerverwijderen($conn) {
         exit();
     }
 }
+
+
+function kamerBewerken($conn, $kamerID, $kamerNaam, $kamerBeschrijving, $prijs, $kamerFoto = null) {
+    try {
+        if ($kamerFoto) {
+            // Verwerk de afbeelding als er een nieuwe is geüpload
+            $targetDir = "uploads/";
+            $targetFile = $targetDir . basename($kamerFoto["name"]);
+            move_uploaded_file($kamerFoto["tmp_name"], $targetFile);
+            
+            // Update query inclusief foto
+            $query = "UPDATE kamers SET kamerNaam = :kamerNaam, kamerBeschrijving = :kamerBeschrijving, prijs = :prijs, kamerFoto = :kamerFoto WHERE kamersID = :kamerID";
+            $stmt = $conn->prepare($query);
+            $stmt->bindParam(':kamerFoto', $targetFile);
+        } else {
+            // Update query zonder foto
+            $query = "UPDATE kamers SET kamerNaam = :kamerNaam, kamerBeschrijving = :kamerBeschrijving, prijs = :prijs WHERE kamersID = :kamerID";
+            $stmt = $conn->prepare($query);
+        }
+
+        // Bind parameters
+        $stmt->bindParam(':kamerNaam', $kamerNaam);
+        $stmt->bindParam(':kamerBeschrijving', $kamerBeschrijving);
+        $stmt->bindParam(':prijs', $prijs);
+        $stmt->bindParam(':kamerID', $kamerID);
+
+        // Uitvoeren
+        if ($stmt->execute()) {
+            return "Kamer succesvol bijgewerkt!";
+        } else {
+            return "Fout bij bijwerken van de kamer.";
+        }
+    } catch (PDOException $e) {
+        return "Fout: " . $e->getMessage();
+    }
+}
+
