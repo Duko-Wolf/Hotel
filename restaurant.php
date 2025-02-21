@@ -14,9 +14,9 @@
     <?php include('includes/header.php'); ?>
 
     <main>
-        <section>
-            <article>
-                <h2>Welkom bij Hotel De Zonne Vallei</h2>
+        <section id="containter">
+            <article class="imgcontainerrechts"> 
+                <h2>Welkom bij Hotel De Zonne Vallei</h2>  <img class="welkomimg" src="images/restaurant/pexels-cottonbro-4255491.jpg" alt="">
                 <p>
                     Bij Hotel De Zonne Vallei zijn we trots op ons wereldberoemde restaurant, waar culinaire dromen
                     werkelijkheid worden.

@@ -1,7 +1,7 @@
 @import url(reset.css);
 @import url(header.css);
 
-
+h2, h3 { text-align: center;}
 
 :root{
     --primary-color: #B5925C;
@@ -88,4 +88,19 @@ footer {
 }
 .wheater{
     text-align: center;
+}
+#containter{
+    
+    
+    display:flex;
+}
+/* images---------------------------------------------------------------------------- */
+.imgcontainerrechts{
+ align-items: center;
+}
+.welkomimg {
+    max-width: 150px; /* Adjust the width as needed */
+    height: 100px; /* Maintain aspect ratio */
+    float: right;
+    margin-left: 20px; /* Add some space between the text and the image */
 }
