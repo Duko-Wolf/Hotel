@@ -45,6 +45,7 @@ $kamers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                 <form method="post">
                     <input type="hidden" name="kamersID" value="<?= $kamer['kamersID'] ?>">
+                    <input type="hidden" name="verwijderKamer" value="1"> <!-- Dit helpt bij de controle -->
                     <button type="submit" onclick="return confirm('Weet je zeker dat je deze kamer wilt verwijderen?');">
                         Verwijderen
                     </button>
@@ -60,24 +61,7 @@ $kamers = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </section>
         <?php endforeach; ?>
 
-        <?php
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['bewerkKamer'])) {
-            $kamerID = $_POST['kamersID'];
-            $kamerNaam = $_POST['kamerNaam'];
-            $kamerBeschrijving = $_POST['kamerBeschrijving'];
-            $prijs = $_POST['prijs'];
-            $kamerFoto = isset($_FILES['kamerFoto']) ? $_FILES['kamerFoto'] : null;
-
-            $resultaat = kamerBewerken($conn, $kamerID, $kamerNaam, $kamerBeschrijving, $prijs, $kamerFoto);
-            echo "<p>$resultaat</p>";
-
-            // Redirect om herladen te voorkomen
-            header("Location: kamers.php");
-        }
-
-
-        ?>
 
 
         <section>
@@ -128,6 +112,35 @@ $kamers = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </form>
             </div>
         </div>
+
+        <?php
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (isset($_POST['bewerkKamer'])) {
+                // Bewerk kamer
+                $kamerID = $_POST['kamersID'];
+                $kamerNaam = $_POST['kamerNaam'];
+                $kamerBeschrijving = $_POST['kamerBeschrijving'];
+                $prijs = $_POST['prijs'];
+                $kamerFoto = isset($_FILES['kamerFoto']) ? $_FILES['kamerFoto'] : null;
+
+                $resultaat = kamerBewerken($conn, $kamerID, $kamerNaam, $kamerBeschrijving, $prijs, $kamerFoto);
+                echo "<p>$resultaat</p>";
+
+                // Redirect om herladen te voorkomen
+                header("Location: kamers.php");
+                exit();
+            } elseif (isset($_POST['verwijderKamer'])) {
+                // Verwijder kamer
+                kamerverwijderen($conn);
+                header("Location: kamers.php");
+                exit();
+            }
+        }
+
+
+
+        ?>
 
     </main>
 

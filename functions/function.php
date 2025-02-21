@@ -131,7 +131,7 @@ function kamerToevoegen($conn)
 
 
 function kamerverwijderen($conn) {
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['kamersID'])) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['verwijderKamer'])) {
         $kamer_id = $_POST['kamersID'];
 
         // Stap 1: Haal de bestandsnaam op uit de database
@@ -160,45 +160,44 @@ function kamerverwijderen($conn) {
         } else {
             echo "Fout bij verwijderen.";
         }
-    } else {
-        echo "Ongeldige aanvraag.";
-        exit();
     }
 }
+
 
 
 function kamerBewerken($conn, $kamerID, $kamerNaam, $kamerBeschrijving, $prijs, $kamerFoto = null) {
-    try {
-        if ($kamerFoto) {
-            // Verwerk de afbeelding als er een nieuwe is geüpload
-            $targetDir = "uploads/";
-            $targetFile = $targetDir . basename($kamerFoto["name"]);
-            move_uploaded_file($kamerFoto["tmp_name"], $targetFile);
-            
-            // Update query inclusief foto
-            $query = "UPDATE kamers SET kamerNaam = :kamerNaam, kamerBeschrijving = :kamerBeschrijving, prijs = :prijs, kamerFoto = :kamerFoto WHERE kamersID = :kamerID";
-            $stmt = $conn->prepare($query);
-            $stmt->bindParam(':kamerFoto', $targetFile);
-        } else {
-            // Update query zonder foto
-            $query = "UPDATE kamers SET kamerNaam = :kamerNaam, kamerBeschrijving = :kamerBeschrijving, prijs = :prijs WHERE kamersID = :kamerID";
-            $stmt = $conn->prepare($query);
-        }
+    // Check of er een nieuwe foto is geüpload
+    if ($kamerFoto && $kamerFoto['error'] == 0) {
+        $fotoNaam = basename($kamerFoto['name']); // Krijg de naam van de foto
+        $uploadPad = 'uploads/' . $fotoNaam; // Het volledige pad naar de uploadmap
 
-        // Bind parameters
-        $stmt->bindParam(':kamerNaam', $kamerNaam);
-        $stmt->bindParam(':kamerBeschrijving', $kamerBeschrijving);
-        $stmt->bindParam(':prijs', $prijs);
-        $stmt->bindParam(':kamerID', $kamerID);
+        // Verplaats de foto naar de juiste map
+        if (move_uploaded_file($kamerFoto['tmp_name'], $uploadPad)) {
+            // Als de upload succesvol is, werk dan de foto in de database bij
+            $query = "UPDATE kamers SET kamerNaam = :kamerNaam, kamerBeschrijving = :kamerBeschrijving, prijs = :prijs, kamerFoto = :kamerFoto WHERE kamersID = :kamersID";
+            $stmt = $conn->prepare($query);
+            $stmt->bindParam(':kamerNaam', $kamerNaam, PDO::PARAM_STR);
+            $stmt->bindParam(':kamerBeschrijving', $kamerBeschrijving, PDO::PARAM_STR);
+            $stmt->bindParam(':prijs', $prijs, PDO::PARAM_STR);
+            $stmt->bindParam(':kamerFoto', $fotoNaam, PDO::PARAM_STR); // Sla alleen de bestandsnaam op
+            $stmt->bindParam(':kamersID', $kamerID, PDO::PARAM_INT);
 
-        // Uitvoeren
-        if ($stmt->execute()) {
-            return "Kamer succesvol bijgewerkt!";
+            return $stmt->execute() ? 'Kamer succesvol bijgewerkt' : 'Er is een fout opgetreden bij het bijwerken van de kamer';
         } else {
-            return "Fout bij bijwerken van de kamer.";
+            return 'Er is een fout opgetreden bij het uploaden van de foto';
         }
-    } catch (PDOException $e) {
-        return "Fout: " . $e->getMessage();
+    } else {
+        // Als er geen nieuwe foto is geüpload, werk dan alleen andere velden bij
+        $query = "UPDATE kamers SET kamerNaam = :kamerNaam, kamerBeschrijving = :kamerBeschrijving, prijs = :prijs WHERE kamersID = :kamersID";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':kamerNaam', $kamerNaam, PDO::PARAM_STR);
+        $stmt->bindParam(':kamerBeschrijving', $kamerBeschrijving, PDO::PARAM_STR);
+        $stmt->bindParam(':prijs', $prijs, PDO::PARAM_STR);
+        $stmt->bindParam(':kamersID', $kamerID, PDO::PARAM_INT);
+
+        return $stmt->execute() ? 'Kamer succesvol bijgewerkt' : 'Er is een fout opgetreden bij het bijwerken van de kamer';
     }
 }
+
+
 
