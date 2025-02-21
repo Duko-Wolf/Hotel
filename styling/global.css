@@ -81,6 +81,9 @@ section{
 }
 
 .modal-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background-color: white;
     margin: 10% auto;
     padding: 20px;
@@ -98,7 +101,39 @@ section{
     cursor: pointer;
 }
 
+.editForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
 
+.kamerToevoegen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.kamer_toevoegen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+}
 
 footer {
     background-color: var(--secondary-color); 

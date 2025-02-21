@@ -65,9 +65,9 @@ $kamers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
         <section>
-            <article>
+            <article class="kamer_toevoegen">
                 <h2>Voeg een nieuwe kamer toe</h2>
-                <form method="post" enctype="multipart/form-data">
+                <form method="post" enctype="multipart/form-data" class="kamerToevoegen">
                     <label for="kamerNaam">Kamernaam:</label>
                     <input type="text" id="kamerNaam" name="kamerNaam" required>
 
@@ -93,7 +93,7 @@ $kamers = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h2>Kamer bewerken</h2>
-                <form id="editForm" method="post" enctype="multipart/form-data">
+                <form id="editForm" method="post" enctype="multipart/form-data" class="editForm">
                     <input type="hidden" id="editKamerID" name="kamersID">
 
                     <label for="editKamerNaam">Kamernaam:</label>
