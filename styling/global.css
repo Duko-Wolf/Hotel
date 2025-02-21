@@ -132,3 +132,10 @@ footer {
     float: right;
     margin-left: 20px; /* Add some space between the text and the image */
 }
+
+.kamerFoto {
+    max-width: 100%; /* Ensure the image scales with the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image is displayed as a block element */
+    margin: 10px 0; /* Add some margin for spacing */
+}
