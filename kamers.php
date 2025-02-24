@@ -30,7 +30,7 @@ $kamers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             <!-- Foto weergeven, als beschikbaar -->
             <?php if (!empty($kamer['kamerFoto'])): ?>
-                <img src="uploads/<?= htmlspecialchars($kamer['kamerFoto']) ?>" alt="Kamer foto" class="kamerFoto">
+               <div class="container-kamerFoto"> <img src="uploads/<?= htmlspecialchars($kamer['kamerFoto']) ?>" alt="Kamer foto" class="kamerFoto"></div>
             <?php else: ?>
                 <p>Geen afbeelding beschikbaar</p>
             <?php endif; ?>

@@ -101,6 +101,10 @@ section{
     cursor: pointer;
 }
 
+.container-kamerFoto {
+    max-width: 100px;
+}
+
 .editForm {
     display: flex;
     flex-direction: column;
