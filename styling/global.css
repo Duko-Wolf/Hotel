@@ -188,6 +188,7 @@ footer {
  flex-flow: row-reverse;
  justify-content: space-evenly;
 }
+
 .flex-itemr {
     display: flex;
     justify-content: space-evenly;

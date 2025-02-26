@@ -17,7 +17,7 @@
         <section id="flexcontainter">
         <h2 class="titleitem">Welkom bij Hotel De Zonne Vallei</h2>  
             <article class="flex-itemr"> 
-                <img class="menu-img" src="images/restaurant/pexels-chanwalrus-958545.jpg" alt="">
+                <img class="menu-img" src="images/restaurant/pexels-naimbic-2290753.jpg" alt="">
                 <p class="flex-text">
                     Bij Hotel De Zonne Vallei zijn we trots op ons wereldberoemde restaurant, waar culinaire dromen
                     werkelijkheid worden.
@@ -117,7 +117,7 @@
         <section>
             <article>
             <div class="flex-itemr">
-                <img class="menu-img" src="images/restaurant/pexels-naimbic-2290753.jpg" alt="">
+                <img class="menu-img" src="images/restaurant/pexels-chanwalrus-958545.jpg" alt="">
                 <div class="flex-text">
                 <h3>KinderMenu:</h3>
                 <table>
