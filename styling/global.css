@@ -106,7 +106,12 @@ section{
 }
 
 .container-kamerFoto {
-    max-width: 100px;
+    max-width: 300px;
+}
+
+.kamerFoto {
+    max-width: 300px;
+    border-radius: 8px;
 }
 
 .editForm {
