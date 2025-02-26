@@ -14,10 +14,11 @@
     <?php include('includes/header.php'); ?>
 
     <main>
-        <section id="containter">
-            <article class="imgcontainerrechts"> 
-                <h2>Welkom bij Hotel De Zonne Vallei</h2>  <img class="welkomimg" src="images/restaurant/pexels-cottonbro-4255491.jpg" alt="">
-                <p>
+        <section id="flexcontainter">
+        <h2 class="titleitem">Welkom bij Hotel De Zonne Vallei</h2>  
+            <article class="flex-itemr"> 
+                <img class="menu-img" src="images/restaurant/pexels-chanwalrus-958545.jpg" alt="">
+                <p class="flex-text">
                     Bij Hotel De Zonne Vallei zijn we trots op ons wereldberoemde restaurant, waar culinaire dromen
                     werkelijkheid worden.
                     Onze 2-duimen chef-kok, bekend om zijn creativiteit en vakmanschap, brengt zijn passie voor koken
@@ -26,11 +27,14 @@
                     onvergetelijke eetervaring die zowel traditionele als moderne smaken combineert.
                 </p> 
             </article>
-        </section>
-
+            </section>
+        
         <section>
             <article>
-                <h2>Menu</h2>
+                <h2 class="titleitemr">Menu</h2>
+                <div class="flex-iteml">
+                <img class="menu-img" src="images/restaurant/pexels-elevate-1267320.jpg" alt="">
+                <div class="flex-text">
                 <h3>Voorgerechten:</h3>
                 <table>
                     <tr>
@@ -48,12 +52,17 @@
                     <tr>
                         <td>5. Gegratineerde Champignons gevuld met knoflook en kruiden, geserveerd met knapperig brood.</td>
                     </tr>
-                </table>
+                    </table>
+                    </div>
+                    </div>
             </article>
         </section>
 
         <section>
-            <article>
+            <article>                
+                <div class="flex-itemr">
+                <img class="menu-img" src="images/restaurant/pexels-mali-64208.jpg" alt="">
+                <div class="flex-text">
                 <h3>Hoofdgerechten:</h3>
                 <table>
                     <tr>
@@ -72,11 +81,16 @@
                         <td>5. Gebakken Zeebaars op een bedje van spinazie, geserveerd met rijst en een beurre blanc saus.</td>
                     </tr>
                 </table>
+            </div>
+            </div>
             </article>
         </section>
 
         <section>
             <article>
+            <div class="flex-iteml">
+                <img class="menu-img" src="images/restaurant/pexels-pixabay-262978.jpg" alt="">
+                <div class="flex-text">
                 <h3>Nagerechten:</h3>
                 <table>
                     <tr>
@@ -95,11 +109,16 @@
                         <td>5. Vers Fruit met Sorbet een selectie van seizoensfruit, geserveerd met verfrissende sorbet.</td>
                     </tr>
                 </table>
+</div>
+</div>
             </article>
         </section>
 
         <section>
             <article>
+            <div class="flex-itemr">
+                <img class="menu-img" src="images/restaurant/pexels-naimbic-2290753.jpg" alt="">
+                <div class="flex-text">
                 <h3>KinderMenu:</h3>
                 <table>
                     <tr>
@@ -118,8 +137,12 @@
                         <td>5. Fish & Chips gebakken vis met frietjes en een beetje ketchup.</td>
                     </tr>
                 </table>
+</div>
+</div>
             </article>
         </section>
+        </section>
+
         
     </main>
     <?php include('includes/footer.php'); ?>
