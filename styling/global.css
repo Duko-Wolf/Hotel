@@ -149,8 +149,8 @@ section{
 }
 
 footer {
-    background-color: var(--secondary-color); 
-    color:  #B5925C;
+    background-color: var(--primary-color); 
+    color:  #F9F58B;
     padding: 10px 0;
     bottom: 0;
     width: 100%;
@@ -160,7 +160,7 @@ footer {
     position: relative;
     display: inline-block;
     left: 10px;
-    color: greenyellow;
+    color: brown;
 }
 .wheater{
     text-align: center;
